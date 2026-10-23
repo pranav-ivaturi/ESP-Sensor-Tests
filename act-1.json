@@ -1,0 +1,787 @@
+{
+  "$schema": "./act.schema.json",
+  "formatVersion": 1,
+  "act": 1,
+  "title": "Act 1 — Screw Around and Find Out",
+  "status": "draft",
+  "summary": "Sameer realises the voice note was not spoken by Parth: the voice is deep and mocking, as if run through a voice modulator. He goes to Parth's home and, with his mother's permission, searches Parth's room, where a riddle leads him to a coded diary, and the decoded phrase unlocks Parth's laptop. The laptop holds files on missing people who all vanished under a full moon and a map screenshot pointing to an abandoned field, where he finds a silver sedan and a backpack of cassettes. A cassette of chanting and drums sends him running from a cyber cafe; the car is traced to a man named Vihaan, and an old home video shows Vihaan playing the same kind of drums Sameer heard on the tape.",
+  "colour_legend": {
+    "red": "A player question and the answer chosen in the draft (the \"Ans :\" lines). In the game these become autoplay questions.",
+    "blue": "Not used in Act 1: the pasted text contains no penalty branches, so no choice below has penalty true.",
+    "other": null
+  },
+  "cinematic": {
+    "is_cinematic": false,
+    "beats": [
+      {
+        "id": "modulated_voice_reaction",
+        "title": "The Wrong Voice",
+        "description": "Sameer shivers as the voice note plays: something is off about the voice, as if it has gone through a voice modulator. It is not Parth's. It is deep and mocking, as though making fun of his distress, and he feels it reverberating in his skull and grating in his ears. He decides to go to Parth's room.",
+        "location": "sameer_home",
+        "characters": ["sameer"],
+        "media_notes": "Voice-only character: the audio must sound pitch-shifted and modulated, deep and mocking. The poem from the Act 0 voice note is the audio being reacted to and must stay word for word. Not a playable room yet."
+      },
+      {
+        "id": "parth_home",
+        "title": "Meeting Parth's Mom",
+        "description": "Sameer goes to Parth's home. Parth's mother look as if she has not slept since the day her son went missing, but she still smiled at him, with great effort. After some small talk, with a lump in his throat, Sameer says: \"I would like to go to Parth's room, aunty.\" His mother looks up the stairs with unshed tears, looks back at Sameer, then allows it. She croaks out: \"Please don't disturb anything in his room, Parth may have a hard time finding stuff once he comes back.\" Sameer runs up the stairs.",
+        "location": "parth_home",
+        "characters": ["sameer", "parth_mother"],
+        "media_notes": "Heavy, quiet mood; forced smiles. The mother's request not to disturb anything is also stored as the fact room_left_untouched."
+      },
+      {
+        "id": "parth_room_laptop",
+        "title": "The Locked Laptop",
+        "description": "Sameer finds himself in Parth's room. He sits on the unmade bed and looks around for a clue. His gaze falls on the open laptop, in sleep mode, as if Parth had been working on it, and he starts his investigation there. It is password protected. He says: \"Looks like I need to guess the password.\" The guess is wrong, and the screen shows a hint: \"Look where my loudest secrets are kept, away from prying eyes, leather bound and stained with ink.\"",
+        "location": "parth_room",
+        "characters": ["sameer"],
+        "media_notes": "Autoplay questions guess_password and laptop_riddle fire inside this beat. The hint text is the riddle exactly as written."
+      },
+      {
+        "id": "diary_and_decoder",
+        "title": "The Diary",
+        "description": "Sameer reaches up to the bookshelf and finds a leather diary with a gold engraving of the moon and stars. The first page carries a quote. Flipping through, he finds a page of dots and dashes, and the next page is a decoder with each pattern matching a letter. He realises he has to sit and decode it by hand, and wonders why Parth could not write normally. The decoded letters read \"OC1808 in laptop\". Sameer finds this a very strange thing to encode but shelves it for later. The rest of the diary is useless because Parth's handwriting is practically unreadable.",
+        "location": "parth_room",
+        "characters": ["sameer"],
+        "media_notes": "Autoplay question decode_diary fires here. The quote on the first page is shown as \"...\" in the source and still needs to be written. The dot-and-dash page and the decoder page need to be designed as zoom-in exhibit images."
+      },
+      {
+        "id": "laptop_folders",
+        "title": "Inside the Laptop",
+        "description": "Sameer types the decoded phrase into the laptop and says, in the worst hacker voice in existence, \"Heh, I'm in.\" In the folders he finds reports and posters of missing people, all of whom disappeared under the full moon. One of the men has a huge hooked nose and a horribly thick nose ring. He mails the contents of the folder to himself. He also finds a screenshot of a map area with coordinates, plus a few corrupted files he is too impatient to look at. He enters the coordinates into Boogle maps and they lead to an abandoned field that looks like the kind of place one would get kidnapped at.",
+        "location": "parth_room",
+        "characters": ["sameer"],
+        "media_notes": "The map app is named \"Boogle maps\" in the source and is kept as written. Show the poster of the hooked-nose man in close-up. The corrupted files are visible but not openable."
+      },
+      {
+        "id": "abandoned_field_car",
+        "title": "The Abandoned Field",
+        "description": "Sameer walks to the abandoned field, which is not far from Parth's home. He checks out a dusty but luxurious silver sedan with the number plate KA01OC1808. On the seat is a black backpack; he opens it and finds a few cassettes. He looks around and finds no one: the place is completely deserted, like an old cowboy movie minus the tumbleweed. In a very unsuspicious way he picks up the bag and leaves as quickly as possible.",
+        "location": "abandoned_field",
+        "characters": ["sameer"],
+        "media_notes": "Deserted, dusty, western-film feel. Sameer takes the backpack with him."
+      },
+      {
+        "id": "cassette_at_cyber_cafe",
+        "title": "The Cassette",
+        "description": "Sameer remembers an old cyber cafe near Ramu's dosa corner that runs Windows XP and has cassette players lying around. After some time finding a working player, he inserts one of the cassettes. The mixtape begins with a faint crackling sound, then ritualistic chanting, weird drum sounds and bizarre words he cannot place in any language. There is a scream and then nothing. Scared for his life, Sameer grabs the bag and runs, with the shopkeeper screaming at him to pay for the device.",
+        "location": "cyber_cafe",
+        "characters": ["sameer", "cafe_shopkeeper"],
+        "media_notes": "Audio is the key asset: crackle, chanting, drums, unintelligible words, a scream, then silence. The drum sound must be distinct enough to be recognised again in the home video."
+      },
+      {
+        "id": "car_owner_lookup",
+        "title": "Vihaan",
+        "description": "Holy hell, he should never have opened that abandoned car. Sameer feels the world spin, then come to an abrupt stop. He pulls out his phone and looks up information about the car. After some time he retrieves the owner's details: the car belongs to a person named Vihaan. He hopes Vihaan is somehow connected to his missing friend and not a useless side quest.",
+        "location": null,
+        "characters": ["sameer"],
+        "media_notes": "Short phone-screen beat; the location is not stated in the source."
+      },
+      {
+        "id": "home_videos_drums",
+        "title": "The Home Videos",
+        "description": "Sameer goes back to Parth's home and asks Parth's mother about anyone named Vihaan. She is a bit confused: he was a childhood friend, and there are a few home videos. The grainy video shows a younger Parth and Vihaan, with Vihaan playing the drums. Sameer recognises the drum sound he has just heard. He looks through every video of Parth and Vihaan but finds nothing else, and with a resigned look says farewell to Parth's mother and leaves.",
+        "location": "parth_home",
+        "characters": ["sameer", "parth_mother", "parth", "vihaan"],
+        "media_notes": "Parth and Vihaan appear only as children in grainy home-video footage. Autoplay question where_heard_drums fires after the drum moment. Act ends when Sameer leaves."
+      }
+    ],
+    "autoplay_questions": [
+      {
+        "id": "after_voice_note",
+        "character": "sameer",
+        "prompt": "What should he do now?",
+        "kind": "prompt",
+        "choices": [
+          {
+            "text": "Go to Parth's room",
+            "correct": true,
+            "outcome": "Sameer goes to Parth's home, meets his parents and asks to see Parth's room.",
+            "penalty": false
+          },
+          {
+            "text": null,
+            "correct": null,
+            "outcome": null,
+            "penalty": null
+          }
+        ],
+        "timing": "after beat: modulated_voice_reaction",
+        "notes": "Source gives only the correct answer; add distractors if wanted."
+      },
+      {
+        "id": "guess_password",
+        "character": "sameer",
+        "prompt": "Looks like I need to guess the password.",
+        "kind": "prompt",
+        "choices": [
+          {
+            "text": "Guess the password",
+            "correct": true,
+            "outcome": "The password is wrong, and the screen shows a hint: \"Look where my loudest secrets are kept, away from prying eyes, leather bound and stained with ink.\"",
+            "penalty": false
+          },
+          {
+            "text": null,
+            "correct": null,
+            "outcome": null,
+            "penalty": null
+          }
+        ],
+        "timing": "during beat: parth_room_laptop (after Sameer sees the laptop is password protected)",
+        "notes": "The source Ans line reads \"The password will be wrong\": the first guess is meant to fail. The button text here is a draft; the source does not give one."
+      },
+      {
+        "id": "laptop_riddle",
+        "character": "sameer",
+        "prompt": "Look where my loudest secrets are kept, away from prying eyes, leather bound and stained with ink.",
+        "kind": "prompt",
+        "choices": [
+          {
+            "text": "Diary or journal",
+            "correct": true,
+            "outcome": "Sameer reaches up to the bookshelf and finds a leather diary with a gold engraving of the moon and stars.",
+            "penalty": false
+          },
+          {
+            "text": null,
+            "correct": null,
+            "outcome": null,
+            "penalty": null
+          }
+        ],
+        "timing": "during beat: parth_room_laptop (after the hint appears)",
+        "notes": "The source accepts \"Diary or journal\": either word should count as correct."
+      },
+      {
+        "id": "decode_diary",
+        "character": "sameer",
+        "prompt": "Why couldn't Parth write it normally?",
+        "kind": "prompt",
+        "choices": [
+          {
+            "text": "OC1808 in laptop",
+            "correct": true,
+            "outcome": "The decoded letters read \"OC1808 in laptop\". Sameer shelves it for later, tries it on the laptop and gets in.",
+            "penalty": false
+          },
+          {
+            "text": null,
+            "correct": null,
+            "outcome": null,
+            "penalty": null
+          }
+        ],
+        "timing": "during beat: diary_and_decoder (after Sameer finds the decoder page)",
+        "notes": "The prompt is Sameer's complaint from the source; the real task is to decode the dots and dashes with the decoder page. The source Ans line reads: using the decoder, the letters give out \"OC1808 in laptop\"."
+      },
+      {
+        "id": "where_heard_drums",
+        "character": "sameer",
+        "prompt": "It may be a lead, now where had he heard drums before?",
+        "kind": "recap",
+        "choices": [
+          {
+            "text": "In one of the cassettes",
+            "correct": true,
+            "outcome": "Sameer connects Vihaan's drumming in the home video to the drum sound on the cassette.",
+            "penalty": false
+          },
+          {
+            "text": null,
+            "correct": null,
+            "outcome": null,
+            "penalty": null
+          }
+        ],
+        "timing": "during beat: home_videos_drums (after the grainy video plays)",
+        "notes": "Recap check that the player remembers the cassette. Add distractors if wanted."
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "sameer",
+      "name": "Sameer",
+      "role": "protagonist",
+      "interrogable": false,
+      "persona": "DRAFT — the player's point of view. Loyal, anxious, talks fast when stressed. He is the one who searches, asks, and refuses to let it go; under pressure he jokes (the worst hacker voice in existence) and keeps going.",
+      "goals": ["Find Parth", "Hold everything together for Parth's mother"],
+      "demeanor": "anxious",
+      "facts": [],
+      "deflections": null,
+      "snubs": null,
+      "voice_examples": null,
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "Never interrogated — players play as him. Same id as in Act 0."
+    },
+    {
+      "id": "parth",
+      "name": "Parth",
+      "role": "victim",
+      "interrogable": false,
+      "persona": null,
+      "goals": null,
+      "demeanor": null,
+      "facts": null,
+      "deflections": null,
+      "snubs": null,
+      "voice_examples": null,
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "Still missing. In Act 1 he appears only as a child in the grainy home video with Vihaan, and through his room, diary and laptop. His handwriting is practically unreadable."
+    },
+    {
+      "id": "parth_mother",
+      "name": "Parth's mother",
+      "role": "witness",
+      "interrogable": true,
+      "persona": "DRAFT — worn out and holding herself together with effort. She still smiles for Sameer, calls him beta, and speaks plainly even when her voice breaks. She is protective of Parth's room and everything in it.",
+      "goals": ["Find her son", "Keep Parth's room exactly as he left it"],
+      "demeanor": "grieving",
+      "facts": [
+        {
+          "id": "room_left_untouched",
+          "text": "She asks Sameer not to disturb anything in Parth's room, because Parth may have a hard time finding his things once he comes back.",
+          "unlock": "always",
+          "disposition": "admit"
+        },
+        {
+          "id": "vihaan_childhood_friend",
+          "text": "Vihaan was a childhood friend, and there are a few home videos of him and Parth.",
+          "unlock": {
+            "requires": ["car_owner_vihaan"]
+          },
+          "disposition": "admit"
+        }
+      ],
+      "deflections": [
+        "I... I don't know, beta. I can't think straight right now.",
+        "Ask me later, beta. Please. My head is spinning.",
+        "I've already told the police everything I know.",
+        "Parth never told me things like that, beta."
+      ],
+      "snubs": [
+        "Beta, I don't understand what you're asking.",
+        "Please, not now. Ask me something I can answer.",
+        "You're repeating yourself, beta. I'm very tired.",
+        "Beta, this is not the time for games."
+      ],
+      "voice_examples": [
+        "Oh hello beta, you and Parth got bored already?",
+        "I didn't call him? He told me you had left early.",
+        "Please don't disturb anything in his room, Parth may have a hard time finding stuff once he comes back.",
+        "Have some water, beta. You look like you haven't slept either."
+      ],
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "Same id as in Act 0. Set interrogable to false if her Act 1 exchanges stay scripted and cinematic. Deflections, snubs and the last voice example are writer-drafted, not taken from the source. In the source the Vihaan fact reads that he was a childhood friend \"of Sameer\", but the home videos show Parth and Vihaan, so it is probably a typo for Parth; the fact text is worded neutrally until the writers confirm."
+    },
+    {
+      "id": "parth_father",
+      "name": "Parth's father",
+      "role": "other",
+      "interrogable": false,
+      "persona": "DRAFT — present with Parth's mother, looking as if he has not slept since his son went missing. He still manages a smile for Sameer.",
+      "goals": null,
+      "demeanor": "grieving",
+      "facts": null,
+      "deflections": null,
+      "snubs": null,
+      "voice_examples": null,
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "Mentioned only as part of \"Parth's parents\"; he has no lines in the source."
+    },
+    {
+      "id": "vihaan",
+      "name": "Vihaan",
+      "role": "other",
+      "interrogable": false,
+      "persona": "DRAFT — a childhood friend of Parth who played the drums in the old home video; registered owner of the silver sedan KA01OC1808. Whether he is a suspect, witness or something else is not yet decided.",
+      "goals": null,
+      "demeanor": null,
+      "facts": null,
+      "deflections": null,
+      "snubs": null,
+      "voice_examples": null,
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "Appears in Act 1 only as a child in grainy home-video footage. Role is deliberately other until a later act decides it."
+    },
+    {
+      "id": "modulated_voice",
+      "name": "The Voice",
+      "role": "other",
+      "interrogable": false,
+      "persona": "DRAFT — heard only on the voice note: a deep, mocking voice that seems to have gone through a voice modulator and seems to make fun of Sameer's distress.",
+      "goals": null,
+      "demeanor": null,
+      "facts": null,
+      "deflections": null,
+      "snubs": null,
+      "voice_examples": null,
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "Display name is a placeholder. Identity is not decided; do not assume it is Vihaan or anyone else."
+    },
+    {
+      "id": "cafe_shopkeeper",
+      "name": "The cyber cafe shopkeeper",
+      "role": "other",
+      "interrogable": false,
+      "persona": "DRAFT — runs the old Windows XP cyber cafe near Ramu's dosa corner; furious when Sameer runs off with a cassette player he has not paid for.",
+      "goals": ["Be paid for the cassette player"],
+      "demeanor": "hostile",
+      "facts": null,
+      "deflections": null,
+      "snubs": null,
+      "voice_examples": null,
+      "appearance": {
+        "age": null,
+        "build": null,
+        "hair": null,
+        "outfit": null,
+        "reference_images": null
+      },
+      "notes": "One-scene character. May return later if Sameer's unpaid debt matters."
+    }
+  ],
+  "rooms": [
+    {
+      "id": "parth_home",
+      "name": "Parth's Home",
+      "mood": "Heavy and quiet: Parth's parents look as though they have not slept since the day he went missing.",
+      "layout": "A family home with a staircase leading up to Parth's room.",
+      "scene_glb": null,
+      "reference_images": null,
+      "props": [
+        {
+          "name": "Stairs",
+          "description": "Lead up to Parth's room; his mother looks up them with unshed tears.",
+          "reference_image": null
+        },
+        {
+          "name": "Home videos",
+          "description": "A few grainy videos of Parth and Vihaan as kids, with Vihaan playing the drums.",
+          "reference_image": null
+        }
+      ],
+      "hotspots": [
+        {
+          "object_id": "mother_at_stairs",
+          "label": "Parth's mother",
+          "type": "character",
+          "character": "parth_mother",
+          "clue": null,
+          "position": null,
+          "placement_hint": "Near the foot of the stairs",
+          "interaction": "Opens question panel; asking about Vihaan unlocks her vihaan_childhood_friend fact",
+          "notes": "Her answers are scripted in the source; see the note on parth_mother about interrogable."
+        },
+        {
+          "object_id": "home_videos",
+          "label": "Home videos",
+          "type": "clue",
+          "character": null,
+          "clue": "home_video_drums",
+          "position": null,
+          "placement_hint": null,
+          "interaction": "Plays the grainy video and adds an Exhibit",
+          "notes": "The source does not say what device or room the videos are watched in."
+        }
+      ],
+      "notes": "Same location id as in Act 0. Open from the start of the act. The mother appears twice: before Parth's room and again after the Vihaan lookup."
+    },
+    {
+      "id": "parth_room",
+      "name": "Parth's Room",
+      "mood": "Lived-in and untouched since he left, with an unmade bed and a laptop open in sleep mode.",
+      "layout": "A bedroom with a bed, a bookshelf and a laptop on which Parth may have been working.",
+      "scene_glb": null,
+      "reference_images": null,
+      "props": [
+        {
+          "name": "Unmade bed",
+          "description": "Where Sameer sits while looking around for a clue.",
+          "reference_image": null
+        },
+        {
+          "name": "Laptop",
+          "description": "Open, in sleep mode and password protected.",
+          "reference_image": null
+        },
+        {
+          "name": "Bookshelf",
+          "description": "Holds the leather diary, reached by reaching up.",
+          "reference_image": null
+        },
+        {
+          "name": "Leather diary",
+          "description": "Gold engraving of the moon and stars on the cover; a quote on the first page; a page of dots and dashes and a decoder page; Parth's handwriting is practically unreadable.",
+          "reference_image": null
+        }
+      ],
+      "hotspots": [
+        {
+          "object_id": "unmade_bed",
+          "label": "Unmade bed",
+          "type": "scenery",
+          "character": null,
+          "clue": null,
+          "position": null,
+          "placement_hint": null,
+          "interaction": "Flavour text only",
+          "notes": "Sameer sits here to think."
+        },
+        {
+          "object_id": "laptop_screen",
+          "label": "Laptop",
+          "type": "clue",
+          "character": null,
+          "clue": "laptop_hint",
+          "position": null,
+          "placement_hint": null,
+          "interaction": "Opens the password prompt; the first guess fails and shows the riddle hint, adding an Exhibit",
+          "notes": "Once the code is decoded, the same laptop opens the folders below."
+        },
+        {
+          "object_id": "bookshelf_diary",
+          "label": "Bookshelf diary",
+          "type": "clue",
+          "character": null,
+          "clue": "moon_diary",
+          "position": null,
+          "placement_hint": "On the bookshelf, reached by reaching up",
+          "interaction": "Zooms in on the diary cover and first-page quote and adds an Exhibit",
+          "notes": "Only discoverable after the laptop riddle."
+        },
+        {
+          "object_id": "diary_coded_pages",
+          "label": "Coded diary pages",
+          "type": "clue",
+          "character": null,
+          "clue": "coded_page",
+          "position": null,
+          "placement_hint": null,
+          "interaction": "Zooms in on the dot-and-dash page and the decoder page and adds an Exhibit",
+          "notes": "The player decodes the pattern to get \"OC1808 in laptop\"."
+        },
+        {
+          "object_id": "laptop_missing_files",
+          "label": "Missing people folder",
+          "type": "clue",
+          "character": null,
+          "clue": "missing_persons_files",
+          "position": null,
+          "placement_hint": "Laptop folders, after login",
+          "interaction": "Opens the folder and adds an Exhibit; Sameer mails the contents to himself",
+          "notes": null
+        },
+        {
+          "object_id": "laptop_nose_ring_poster",
+          "label": "Poster of the man with the nose ring",
+          "type": "clue",
+          "character": null,
+          "clue": "hooked_nose_man",
+          "position": null,
+          "placement_hint": "Inside the missing people folder",
+          "interaction": "Zooms in on the poster and adds an Exhibit",
+          "notes": null
+        },
+        {
+          "object_id": "laptop_map_screenshot",
+          "label": "Map screenshot",
+          "type": "clue",
+          "character": null,
+          "clue": "map_coordinates",
+          "position": null,
+          "placement_hint": "Laptop folders, after login",
+          "interaction": "Opens the screenshot; entering the coordinates into Boogle maps opens the abandoned field and adds an Exhibit",
+          "notes": null
+        },
+        {
+          "object_id": "laptop_corrupted_files",
+          "label": "Corrupted files",
+          "type": "scenery",
+          "character": null,
+          "clue": null,
+          "position": null,
+          "placement_hint": "Laptop folders, after login",
+          "interaction": "Flavour text only",
+          "notes": "Sameer is too impatient to look at them. They may become a clue in a later act."
+        }
+      ],
+      "notes": "The first-page quote of the diary is shown as \"...\" in the source and still needs to be written. The unreadable handwriting is deliberate: only the coded page is useful."
+    },
+    {
+      "id": "abandoned_field",
+      "name": "The Abandoned Field",
+      "mood": "Completely deserted, dusty and eerie: an old cowboy movie minus the tumbleweed.",
+      "layout": "An open field not far from Parth's home, with a silver sedan parked in it.",
+      "scene_glb": null,
+      "reference_images": null,
+      "props": [
+        {
+          "name": "Silver sedan",
+          "description": "Dusty but luxurious, number plate KA01OC1808.",
+          "reference_image": null
+        },
+        {
+          "name": "Black backpack",
+          "description": "Lies on the sedan's seat and holds a few cassettes.",
+          "reference_image": null
+        }
+      ],
+      "hotspots": [
+        {
+          "object_id": "silver_sedan",
+          "label": "Silver sedan",
+          "type": "clue",
+          "character": null,
+          "clue": "sedan_plate",
+          "position": null,
+          "placement_hint": null,
+          "interaction": "Zooms in on the number plate and adds an Exhibit",
+          "notes": null
+        },
+        {
+          "object_id": "car_backpack",
+          "label": "Black backpack",
+          "type": "clue",
+          "character": null,
+          "clue": "backpack_cassettes",
+          "position": null,
+          "placement_hint": "On the seat of the car",
+          "interaction": "Opens the bag, shows the cassettes and adds an Exhibit",
+          "notes": "Sameer takes the bag with him."
+        }
+      ],
+      "notes": "Opens once the map coordinates are found. It is the place Sameer thinks someone could get kidnapped at."
+    },
+    {
+      "id": "cyber_cafe",
+      "name": "The Cyber Cafe",
+      "mood": "Old and cluttered; running Windows XP, with cassette players lying around.",
+      "layout": "Near Ramu's dosa corner.",
+      "scene_glb": null,
+      "reference_images": null,
+      "props": [
+        {
+          "name": "Windows XP computers",
+          "description": "The cafe's old machines.",
+          "reference_image": null
+        },
+        {
+          "name": "Cassette players",
+          "description": "Several lying around; only some work.",
+          "reference_image": null
+        }
+      ],
+      "hotspots": [
+        {
+          "object_id": "cassette_player",
+          "label": "Working cassette player",
+          "type": "clue",
+          "character": null,
+          "clue": "mixtape_recording",
+          "position": null,
+          "placement_hint": null,
+          "interaction": "Plays the cassette and adds an Exhibit",
+          "notes": "Sameer must first find a working player."
+        }
+      ],
+      "notes": "Opens once Sameer has the cassettes. The shopkeeper shouts at Sameer to pay for the device but is not a hotspot because he is not interrogable. Sameer leaves without paying."
+    }
+  ],
+  "clues": [
+    {
+      "id": "voice_not_parth",
+      "name": "The Wrong Voice",
+      "description": "The voice on the voice note is deep and mocking, as if run through a voice modulator, and it is not Parth's.",
+      "found_in_room": null,
+      "found_on_hotspot": null,
+      "requires": [],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Found while listening, in the narrative location sameer_home, which is not a room. Updates the Act 0 voicemail clue."
+    },
+    {
+      "id": "laptop_hint",
+      "name": "Laptop Password Hint",
+      "description": "After a wrong guess the laptop shows a riddle: \"Look where my loudest secrets are kept, away from prying eyes, leather bound and stained with ink.\"",
+      "found_in_room": "parth_room",
+      "found_on_hotspot": "laptop_screen",
+      "requires": [],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Answer: a diary or journal."
+    },
+    {
+      "id": "moon_diary",
+      "name": "Parth's Leather Diary",
+      "description": "A leather-bound diary on Parth's bookshelf, engraved in gold with the moon and stars, filled with practically unreadable handwriting.",
+      "found_in_room": "parth_room",
+      "found_on_hotspot": "bookshelf_diary",
+      "requires": ["laptop_hint"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "The first-page quote is shown as \"...\" in the source and still needs to be written."
+    },
+    {
+      "id": "coded_page",
+      "name": "Coded Diary Page",
+      "description": "A diary page of dots and dashes sits beside a decoder page, and decoding it gives \"OC1808 in laptop\".",
+      "found_in_room": "parth_room",
+      "found_on_hotspot": "diary_coded_pages",
+      "requires": ["moon_diary"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "The dot-and-dash patterns and the decoder table are not in the source and need to be designed. The source does not state the exact laptop password; presumably it is \"OC1808\" or the full phrase, to be confirmed."
+    },
+    {
+      "id": "missing_persons_files",
+      "name": "Missing People Reports",
+      "description": "The laptop holds reports and posters of missing people, all of whom disappeared under the full moon.",
+      "found_in_room": "parth_room",
+      "found_on_hotspot": "laptop_missing_files",
+      "requires": ["coded_page"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Sameer mails the contents of the folder to himself, so the files persist for later acts."
+    },
+    {
+      "id": "hooked_nose_man",
+      "name": "The Man with the Nose Ring",
+      "description": "One of the missing men has a huge hooked nose and a horribly thick nose ring.",
+      "found_in_room": "parth_room",
+      "found_on_hotspot": "laptop_nose_ring_poster",
+      "requires": ["missing_persons_files"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Unnamed in the source. Singled out by the narration, so treat it as a planted detail; his identity and link to the plot are not decided."
+    },
+    {
+      "id": "map_coordinates",
+      "name": "Map Screenshot with Coordinates",
+      "description": "A screenshot of a map area with coordinates, which Boogle maps places at an abandoned field.",
+      "found_in_room": "parth_room",
+      "found_on_hotspot": "laptop_map_screenshot",
+      "requires": ["coded_page"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Opens the room abandoned_field."
+    },
+    {
+      "id": "sedan_plate",
+      "name": "Silver Sedan KA01OC1808",
+      "description": "A dusty but luxurious silver sedan sits in the abandoned field with the number plate KA01OC1808, which contains the code OC1808 from Parth's diary.",
+      "found_in_room": "abandoned_field",
+      "found_on_hotspot": "silver_sedan",
+      "requires": ["map_coordinates"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Lets Sameer look up the car's owner."
+    },
+    {
+      "id": "backpack_cassettes",
+      "name": "Black Backpack of Cassettes",
+      "description": "A black backpack on the sedan's seat holds a few cassettes.",
+      "found_in_room": "abandoned_field",
+      "found_on_hotspot": "car_backpack",
+      "requires": ["sedan_plate"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Sameer takes the bag. Opens the room cyber_cafe."
+    },
+    {
+      "id": "mixtape_recording",
+      "name": "The Cassette Recording",
+      "description": "The mixtape plays faint crackling, ritualistic chanting, weird drum sounds and bizarre words in no language Sameer knows, ending in a scream and then nothing.",
+      "found_in_room": "cyber_cafe",
+      "found_on_hotspot": "cassette_player",
+      "requires": ["backpack_cassettes"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Only one cassette is played in the source; the others are unplayed. The drum sound is later matched to the home video."
+    },
+    {
+      "id": "car_owner_vihaan",
+      "name": "Car Owner: Vihaan",
+      "description": "A phone lookup shows the silver sedan belongs to a man named Vihaan.",
+      "found_in_room": null,
+      "found_on_hotspot": null,
+      "requires": ["sedan_plate"],
+      "grants": ["vihaan_childhood_friend"],
+      "exhibit_image": null,
+      "notes": "Found on Sameer's phone; the source does not say where he is. Unlocks the mother's fact about Vihaan."
+    },
+    {
+      "id": "home_video_drums",
+      "name": "Home Video: Parth and Vihaan",
+      "description": "A grainy home video shows a young Parth and Vihaan, with Vihaan playing drums that sound like the drums on the cassette.",
+      "found_in_room": "parth_home",
+      "found_on_hotspot": "home_videos",
+      "requires": ["car_owner_vihaan", "mixtape_recording"],
+      "grants": [],
+      "exhibit_image": null,
+      "notes": "Sameer finds nothing else in the other videos. This links the cassette to Vihaan but does not decide his role."
+    }
+  ],
+  "truth": {
+    "culprit": null,
+    "method": null,
+    "motive": null,
+    "required_clues": null,
+    "contradictions": [
+      {
+        "character": "modulated_voice",
+        "they_claim": "The voice note arrives as a message from Parth.",
+        "the_truth": "The voice is not Parth's; it is deep, mocking and apparently run through a voice modulator. Who is speaking is not yet decided.",
+        "caught_by": ["voice_not_parth"]
+      }
+    ],
+    "spoiler_notes": "Culprit, method and motive are unknown until the remaining acts are written. Threads the source plants but does not resolve: the missing people who all vanished under a full moon, the man with the hooked nose and nose ring, the ritual cassette with drums, the car registered to Vihaan and Vihaan's drumming. Do not read any of them as an accusation yet."
+  },
+  "fallback_qa": [],
+  "act_flow": {
+    "starts_when": "The player has listened to the voice note (end of Act 0) and the modulated voice reaction plays.",
+    "ends_when": "Sameer finds nothing more in the home videos, says farewell to Parth's mother and leaves.",
+    "rooms_open": ["parth_home", "parth_room", "abandoned_field", "cyber_cafe"],
+    "rooms_close": [],
+    "carries_over": "The clues voice_not_parth, laptop_hint, moon_diary, coded_page, missing_persons_files, hooked_nose_man, map_coordinates, sedan_plate, backpack_cassettes, mixtape_recording, car_owner_vihaan and home_video_drums; the character Vihaan and the drum link; the missing-people files Sameer mailed to himself; the black backpack of cassettes Sameer took; and Sameer's unpaid debt at the cyber cafe. Sameer remains the player's point of view.",
+    "next_act": 2
+  },
+  "notes": "Open decisions for writers: (1) is_cinematic is null because the source reads as a linear story with questions, yet it contains room, hotspot and clue structure; decide whether Act 1 is playable exploration or authored playback. (2) The diary's first-page quote is \"...\" in the source and needs to be written. (3) The dot-and-dash patterns and decoder table, and the exact laptop password, are not in the source. (4) The source says Vihaan was a childhood friend \"of Sameer\", but the home videos show Parth and Vihaan; likely a typo for Parth, so the fact is worded neutrally. (5) The map app is named \"Boogle maps\" in the source and is kept as written. (6) Rooms unlock in order: parth_home first, then abandoned_field after map_coordinates, then cyber_cafe after backpack_cassettes. (7) The source has no penalty branches in Act 1, so every choice has penalty false, and distractor choices are left null placeholders as in Act 0. (8) Hotspot positions are null; the build team will place them. (9) Ids sameer, parth, parth_mother and parth_home are reused from Act 0 on purpose; all other ids are new. (10) The Act 0 voicemail clue should now note that the voice is not Parth's."
+}

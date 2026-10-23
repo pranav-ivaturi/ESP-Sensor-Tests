@@ -1,0 +1,12 @@
+Command: C:\Users\Prana\.espressif\python_env\idf6.0_py3.11_env\Scripts\python.exe C:\esp\v6.0.2\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Wheel_70m_LowRPM\build\Wheel_70m_LowRPM.elf C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Wheel_70m_LowRPM\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Prana\.espressif\python_env\idf6.0_py3.11_env\Scripts\python.exe' 'C:\esp\v6.0.2\esp-idf\tools\idf.py' '-p' 'COM9'
+--- WARNING: GDB cannot open serial ports accessed as COMx
+--- NOTE: Using \\.\COM9 instead...
+--- esp-idf-monitor 1.10.0 on \\.\COM9 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.0.2/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.0.2/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.0.2/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.0.2/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.0.2/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.0.2/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+

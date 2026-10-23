@@ -1,0 +1,297 @@
+Command: C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:\esp\v6.0.2\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\4_Magnets\build\4_Magnets.elf C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\4_Magnets\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe' 'C:\esp\v6.0.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  7 2026 17:37:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09510h ( 38160) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=00019538 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001bf6c vaddr=40080000 size=040ach ( 16556) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0edd0h ( 60880) map[0m
+[0;32mI (133) esp_image: segment 4: paddr=0002edf8 vaddr=400840ac size=06dc0h ( 28096) load[0m
+[0;32mI (145) esp_image: segment 5: paddr=00035bc0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (151) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (151) boot: Disabling RNG early entropy source...[0m
+[0;32mI (163) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (172) cpu_start: Pro cpu start user code[0m
+[0;32mI (172) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (174) app_init: Application information:[0m
+[0;32mI (177) app_init: Project name:     4_Magnets[0m
+[0;32mI (182) app_init: App version:      1[0m
+[0;32mI (185) app_init: Compile time:     Oct  7 2026 17:36:28[0m
+[0;32mI (190) app_init: ELF file SHA256:  ee33aaf7a...[0m
+[0;32mI (194) app_init: ESP-IDF:          v6.0.2[0m
+[0;32mI (198) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (202) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (206) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (210) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (216) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 3FFB3418 len 0002CBE8 (178 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (232) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (237) heap_init: At 4008AE6C len 00015194 (84 KiB): IRAM[0m
+[0;33mW (244) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (276) main_task: Started on CPU0[0m
+[0;32mI (276) main_task: Calling app_main()[0m
+[0;32mI (276) 4_MAGNET_RPM: ========================================[0m
+[0;32mI (286) 4_MAGNET_RPM:        4 MAGNET WHEEL RPM TEST[0m
+[0;32mI (286) 4_MAGNET_RPM: ========================================[0m
+[0;32mI (296) 4_MAGNET_RPM: Hall A0       : GPIO34[0m
+[0;32mI (296) 4_MAGNET_RPM: Hall D0       : GPIO27[0m
+[0;32mI (296) 4_MAGNET_RPM: Wheel         : 130 mm[0m
+[0;32mI (306) 4_MAGNET_RPM: Magnets       : 4[0m
+[0;32mI (306) 4_MAGNET_RPM: Min pulse     : 8000 us[0m
+[0;32mI (316) 4_MAGNET_RPM: Max RPM       : 1800[0m
+[0;32mI (316) 4_MAGNET_RPM: ========================================[0m
+[0;32mI (326) 4_MAGNET_RPM: Hall sensor ready.[0m
+[0;32mI (326) 4_MAGNET_RPM: Waiting for wheel...[0m
+[0;32mI (326) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (436) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (536) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (636) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (736) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (836) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (936) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1036) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1136) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1236) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1336) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1436) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1536) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1636) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1736) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1836) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (1936) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2036) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2136) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2236) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2336) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2436) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2536) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2636) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2736) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2836) 4_MAGNET_RPM: A0: +48 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (2936) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3036) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3136) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3236) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3336) 4_MAGNET_RPM: A0: +6 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3436) 4_MAGNET_RPM: A0: +37 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3536) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3636) 4_MAGNET_RPM: A0: -6 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3736) 4_MAGNET_RPM: A0: +46 | D0: 0 | Magnets: 0 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3836) 4_MAGNET_RPM: A0: -56 | D0: 1 | Magnets: 1 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (3936) 4_MAGNET_RPM: A0: +51 | D0: 0 | Magnets: 1 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (4036) 4_MAGNET_RPM: A0: -29 | D0: 0 | Magnets: 2 | RPM: 111 | Speed: 2 km/h[0m
+[0;32mI (4136) 4_MAGNET_RPM: A0: +51 | D0: 0 | Magnets: 3 | RPM: 113 | Speed: 2 km/h[0m
+[0;32mI (4236) 4_MAGNET_RPM: A0: -96 | D0: 1 | Magnets: 4 | RPM: 149 | Speed: 3 km/h[0m
+[0;32mI (4336) 4_MAGNET_RPM: A0: +57 | D0: 0 | Magnets: 4 | RPM: 149 | Speed: 3 km/h[0m
+[0;32mI (4436) 4_MAGNET_RPM: A0: +61 | D0: 0 | Magnets: 5 | RPM: 130 | Speed: 3 km/h[0m
+[0;32mI (4536) 4_MAGNET_RPM: A0: -253 | D0: 1 | Magnets: 6 | RPM: 145 | Speed: 3 km/h[0m
+[0;32mI (4636) 4_MAGNET_RPM: A0: +61 | D0: 0 | Magnets: 6 | RPM: 145 | Speed: 3 km/h[0m
+[0;32mI (4736) 4_MAGNET_RPM: A0: +63 | D0: 0 | Magnets: 7 | RPM: 136 | Speed: 3 km/h[0m
+[0;32mI (4836) 4_MAGNET_RPM: A0: -365 | D0: 1 | Magnets: 8 | RPM: 152 | Speed: 3 km/h[0m
+[0;32mI (4936) 4_MAGNET_RPM: A0: +63 | D0: 0 | Magnets: 8 | RPM: 152 | Speed: 3 km/h[0m
+[0;32mI (5036) 4_MAGNET_RPM: A0: +71 | D0: 0 | Magnets: 9 | RPM: 121 | Speed: 2 km/h[0m
+[0;32mI (5136) 4_MAGNET_RPM: A0: +84 | D0: 0 | Magnets: 10 | RPM: 144 | Speed: 3 km/h[0m
+[0;32mI (5236) 4_MAGNET_RPM: A0: -508 | D0: 1 | Magnets: 11 | RPM: 138 | Speed: 3 km/h[0m
+[0;32mI (5336) 4_MAGNET_RPM: A0: +16 | D0: 0 | Magnets: 11 | RPM: 138 | Speed: 3 km/h[0m
+[0;32mI (5436) 4_MAGNET_RPM: A0: +62 | D0: 0 | Magnets: 12 | RPM: 137 | Speed: 3 km/h[0m
+[0;32mI (5536) 4_MAGNET_RPM: A0: +63 | D0: 0 | Magnets: 13 | RPM: 130 | Speed: 3 km/h[0m
+[0;32mI (5636) 4_MAGNET_RPM: A0: +63 | D0: 0 | Magnets: 14 | RPM: 154 | Speed: 3 km/h[0m
+[0;32mI (5736) 4_MAGNET_RPM: A0: +53 | D0: 0 | Magnets: 15 | RPM: 148 | Speed: 3 km/h[0m
+[0;32mI (5836) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 16 | RPM: 145 | Speed: 3 km/h[0m
+[0;32mI (5936) 4_MAGNET_RPM: A0: -61 | D0: 1 | Magnets: 17 | RPM: 164 | Speed: 4 km/h[0m
+[0;32mI (6036) 4_MAGNET_RPM: A0: -42 | D0: 0 | Magnets: 17 | RPM: 164 | Speed: 4 km/h[0m
+[0;32mI (6136) 4_MAGNET_RPM: A0: -50 | D0: 1 | Magnets: 18 | RPM: 147 | Speed: 3 km/h[0m
+[0;32mI (6236) 4_MAGNET_RPM: A0: -3 | D0: 0 | Magnets: 18 | RPM: 147 | Speed: 3 km/h[0m
+[0;32mI (6336) 4_MAGNET_RPM: A0: -60 | D0: 1 | Magnets: 19 | RPM: 124 | Speed: 3 km/h[0m
+[0;32mI (6436) 4_MAGNET_RPM: A0: +30 | D0: 0 | Magnets: 19 | RPM: 124 | Speed: 3 km/h[0m
+[0;32mI (6536) 4_MAGNET_RPM: A0: +50 | D0: 0 | Magnets: 20 | RPM: 108 | Speed: 2 km/h[0m
+[0;32mI (6636) 4_MAGNET_RPM: A0: +56 | D0: 0 | Magnets: 21 | RPM: 102 | Speed: 2 km/h[0m
+[0;32mI (6736) 4_MAGNET_RPM: A0: +54 | D0: 0 | Magnets: 22 | RPM: 98 | Speed: 2 km/h[0m
+[0;32mI (6836) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 23 | RPM: 111 | Speed: 2 km/h[0m
+[0;32mI (6936) 4_MAGNET_RPM: A0: +17 | D0: 0 | Magnets: 24 | RPM: 122 | Speed: 2 km/h[0m
+[0;32mI (7036) 4_MAGNET_RPM: A0: -93 | D0: 1 | Magnets: 25 | RPM: 133 | Speed: 3 km/h[0m
+[0;32mI (7136) 4_MAGNET_RPM: A0: -22 | D0: 0 | Magnets: 25 | RPM: 133 | Speed: 3 km/h[0m
+[0;32mI (7236) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (7336) 4_MAGNET_RPM: A0: +46 | D0: 0 | Magnets: 26 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (7436) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (7536) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (7636) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 26 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (7736) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (7836) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (7936) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8036) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8136) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8236) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8336) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8436) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8536) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8636) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8736) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8836) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (8936) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9036) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9136) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9236) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9336) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9436) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9536) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9636) 4_MAGNET_RPM: A0: +40 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9736) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9836) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (9936) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10036) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10136) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10236) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10336) 4_MAGNET_RPM: A0: +46 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10436) 4_MAGNET_RPM: A0: +59 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10536) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10636) 4_MAGNET_RPM: A0: +7 | D0: 0 | Magnets: 26 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (10736) 4_MAGNET_RPM: A0: +26 | D0: 0 | Magnets: 27 | RPM: 4 | Speed: 0 km/h[0m
+[0;32mI (10836) 4_MAGNET_RPM: A0: +47 | D0: 0 | Magnets: 28 | RPM: 104 | Speed: 2 km/h[0m
+[0;32mI (10936) 4_MAGNET_RPM: A0: -25 | D0: 0 | Magnets: 28 | RPM: 104 | Speed: 2 km/h[0m
+[0;32mI (11036) 4_MAGNET_RPM: A0: +35 | D0: 0 | Magnets: 29 | RPM: 91 | Speed: 2 km/h[0m
+[0;32mI (11136) 4_MAGNET_RPM: A0: +37 | D0: 0 | Magnets: 30 | RPM: 117 | Speed: 2 km/h[0m
+[0;32mI (11236) 4_MAGNET_RPM: A0: +33 | D0: 0 | Magnets: 30 | RPM: 117 | Speed: 2 km/h[0m
+[0;32mI (11336) 4_MAGNET_RPM: A0: +37 | D0: 0 | Magnets: 30 | RPM: 117 | Speed: 2 km/h[0m
+[0;32mI (11436) 4_MAGNET_RPM: A0: +36 | D0: 0 | Magnets: 31 | RPM: 103 | Speed: 2 km/h[0m
+[0;32mI (11536) 4_MAGNET_RPM: A0: -101 | D0: 1 | Magnets: 32 | RPM: 139 | Speed: 3 km/h[0m
+[0;32mI (11636) 4_MAGNET_RPM: A0: +55 | D0: 0 | Magnets: 32 | RPM: 139 | Speed: 3 km/h[0m
+[0;32mI (11736) 4_MAGNET_RPM: A0: +47 | D0: 0 | Magnets: 33 | RPM: 112 | Speed: 2 km/h[0m
+[0;32mI (11836) 4_MAGNET_RPM: A0: -266 | D0: 1 | Magnets: 34 | RPM: 133 | Speed: 3 km/h[0m
+[0;32mI (11936) 4_MAGNET_RPM: A0: -31 | D0: 0 | Magnets: 34 | RPM: 133 | Speed: 3 km/h[0m
+[0;32mI (12036) 4_MAGNET_RPM: A0: +68 | D0: 0 | Magnets: 35 | RPM: 108 | Speed: 2 km/h[0m
+[0;32mI (12136) 4_MAGNET_RPM: A0: +58 | D0: 0 | Magnets: 36 | RPM: 131 | Speed: 3 km/h[0m
+[0;32mI (12236) 4_MAGNET_RPM: A0: +49 | D0: 0 | Magnets: 37 | RPM: 125 | Speed: 3 km/h[0m
+[0;32mI (12336) 4_MAGNET_RPM: A0: +37 | D0: 0 | Magnets: 38 | RPM: 141 | Speed: 3 km/h[0m
+[0;32mI (12436) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 39 | RPM: 138 | Speed: 3 km/h[0m
+[0;32mI (12536) 4_MAGNET_RPM: A0: +45 | D0: 0 | Magnets: 40 | RPM: 154 | Speed: 3 km/h[0m
+[0;32mI (12636) 4_MAGNET_RPM: A0: +49 | D0: 0 | Magnets: 41 | RPM: 152 | Speed: 3 km/h[0m
+[0;32mI (12736) 4_MAGNET_RPM: A0: +50 | D0: 0 | Magnets: 42 | RPM: 149 | Speed: 3 km/h[0m
+[0;32mI (12836) 4_MAGNET_RPM: A0: +49 | D0: 0 | Magnets: 43 | RPM: 147 | Speed: 3 km/h[0m
+[0;32mI (12936) 4_MAGNET_RPM: A0: -47 | D0: 0 | Magnets: 44 | RPM: 144 | Speed: 3 km/h[0m
+[0;32mI (13036) 4_MAGNET_RPM: A0: -187 | D0: 1 | Magnets: 45 | RPM: 142 | Speed: 3 km/h[0m
+[0;32mI (13136) 4_MAGNET_RPM: A0: +50 | D0: 0 | Magnets: 45 | RPM: 142 | Speed: 3 km/h[0m
+[0;32mI (13236) 4_MAGNET_RPM: A0: +57 | D0: 0 | Magnets: 46 | RPM: 129 | Speed: 3 km/h[0m
+[0;32mI (13336) 4_MAGNET_RPM: A0: -54 | D0: 0 | Magnets: 47 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (13436) 4_MAGNET_RPM: A0: -33 | D0: 0 | Magnets: 48 | RPM: 122 | Speed: 2 km/h[0m
+[0;32mI (13536) 4_MAGNET_RPM: A0: +59 | D0: 0 | Magnets: 49 | RPM: 150 | Speed: 3 km/h[0m
+[0;32mI (13636) 4_MAGNET_RPM: A0: -166 | D0: 1 | Magnets: 50 | RPM: 146 | Speed: 3 km/h[0m
+[0;32mI (13736) 4_MAGNET_RPM: A0: +58 | D0: 0 | Magnets: 50 | RPM: 146 | Speed: 3 km/h[0m
+[0;32mI (13836) 4_MAGNET_RPM: A0: -95 | D0: 1 | Magnets: 51 | RPM: 145 | Speed: 3 km/h[0m
+[0;32mI (13936) 4_MAGNET_RPM: A0: +54 | D0: 0 | Magnets: 51 | RPM: 145 | Speed: 3 km/h[0m
+[0;32mI (14036) 4_MAGNET_RPM: A0: -122 | D0: 1 | Magnets: 52 | RPM: 133 | Speed: 3 km/h[0m
+[0;32mI (14136) 4_MAGNET_RPM: A0: +57 | D0: 0 | Magnets: 52 | RPM: 133 | Speed: 3 km/h[0m
+[0;32mI (14236) 4_MAGNET_RPM: A0: -149 | D0: 1 | Magnets: 53 | RPM: 123 | Speed: 3 km/h[0m
+[0;32mI (14336) 4_MAGNET_RPM: A0: +56 | D0: 0 | Magnets: 53 | RPM: 123 | Speed: 3 km/h[0m
+[0;32mI (14436) 4_MAGNET_RPM: A0: +50 | D0: 0 | Magnets: 54 | RPM: 82 | Speed: 2 km/h[0m
+[0;32mI (14536) 4_MAGNET_RPM: A0: -124 | D0: 1 | Magnets: 55 | RPM: 96 | Speed: 2 km/h[0m
+[0;32mI (14636) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 55 | RPM: 96 | Speed: 2 km/h[0m
+[0;32mI (14736) 4_MAGNET_RPM: A0: +56 | D0: 0 | Magnets: 56 | RPM: 93 | Speed: 2 km/h[0m
+[0;32mI (14836) 4_MAGNET_RPM: A0: -42 | D0: 0 | Magnets: 57 | RPM: 114 | Speed: 2 km/h[0m
+[0;32mI (14936) 4_MAGNET_RPM: A0: -137 | D0: 1 | Magnets: 58 | RPM: 140 | Speed: 3 km/h[0m
+[0;32mI (15036) 4_MAGNET_RPM: A0: +15 | D0: 0 | Magnets: 58 | RPM: 140 | Speed: 3 km/h[0m
+[0;32mI (15136) 4_MAGNET_RPM: A0: +55 | D0: 0 | Magnets: 59 | RPM: 138 | Speed: 3 km/h[0m
+[0;32mI (15236) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 60 | RPM: 138 | Speed: 3 km/h[0m
+[0;32mI (15336) 4_MAGNET_RPM: A0: +47 | D0: 0 | Magnets: 61 | RPM: 158 | Speed: 3 km/h[0m
+[0;32mI (15436) 4_MAGNET_RPM: A0: +46 | D0: 0 | Magnets: 62 | RPM: 156 | Speed: 3 km/h[0m
+[0;32mI (15536) 4_MAGNET_RPM: A0: -25 | D0: 0 | Magnets: 63 | RPM: 146 | Speed: 3 km/h[0m
+[0;32mI (15636) 4_MAGNET_RPM: A0: -41 | D0: 0 | Magnets: 64 | RPM: 169 | Speed: 4 km/h[0m
+[0;32mI (15736) 4_MAGNET_RPM: A0: -68 | D0: 1 | Magnets: 65 | RPM: 162 | Speed: 3 km/h[0m
+[0;32mI (15836) 4_MAGNET_RPM: A0: -17 | D0: 0 | Magnets: 65 | RPM: 162 | Speed: 3 km/h[0m
+[0;32mI (15936) 4_MAGNET_RPM: A0: -65 | D0: 1 | Magnets: 66 | RPM: 143 | Speed: 3 km/h[0m
+[0;32mI (16036) 4_MAGNET_RPM: A0: +9 | D0: 0 | Magnets: 66 | RPM: 143 | Speed: 3 km/h[0m
+[0;32mI (16136) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 67 | RPM: 125 | Speed: 3 km/h[0m
+[0;32mI (16236) 4_MAGNET_RPM: A0: +54 | D0: 0 | Magnets: 68 | RPM: 122 | Speed: 2 km/h[0m
+[0;32mI (16336) 4_MAGNET_RPM: A0: +57 | D0: 0 | Magnets: 69 | RPM: 113 | Speed: 2 km/h[0m
+[0;32mI (16436) 4_MAGNET_RPM: A0: +57 | D0: 0 | Magnets: 70 | RPM: 111 | Speed: 2 km/h[0m
+[0;32mI (16536) 4_MAGNET_RPM: A0: +18 | D0: 0 | Magnets: 71 | RPM: 121 | Speed: 2 km/h[0m
+[0;32mI (16636) 4_MAGNET_RPM: A0: -155 | D0: 1 | Magnets: 72 | RPM: 132 | Speed: 3 km/h[0m
+[0;32mI (16736) 4_MAGNET_RPM: A0: -38 | D0: 0 | Magnets: 72 | RPM: 132 | Speed: 3 km/h[0m
+[0;32mI (16836) 4_MAGNET_RPM: A0: +45 | D0: 0 | Magnets: 73 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (16936) 4_MAGNET_RPM: A0: +63 | D0: 0 | Magnets: 74 | RPM: 127 | Speed: 3 km/h[0m
+[0;32mI (17036) 4_MAGNET_RPM: A0: -21 | D0: 0 | Magnets: 75 | RPM: 121 | Speed: 2 km/h[0m
+[0;32mI (17136) 4_MAGNET_RPM: A0: -156 | D0: 1 | Magnets: 76 | RPM: 118 | Speed: 2 km/h[0m
+[0;32mI (17236) 4_MAGNET_RPM: A0: +54 | D0: 0 | Magnets: 76 | RPM: 118 | Speed: 2 km/h[0m
+[0;32mI (17336) 4_MAGNET_RPM: A0: +35 | D0: 0 | Magnets: 77 | RPM: 113 | Speed: 2 km/h[0m
+[0;32mI (17436) 4_MAGNET_RPM: A0: -114 | D0: 1 | Magnets: 78 | RPM: 112 | Speed: 2 km/h[0m
+[0;32mI (17536) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 78 | RPM: 112 | Speed: 2 km/h[0m
+[0;32mI (17636) 4_MAGNET_RPM: A0: +67 | D0: 0 | Magnets: 79 | RPM: 105 | Speed: 2 km/h[0m
+[0;32mI (17736) 4_MAGNET_RPM: A0: -290 | D0: 1 | Magnets: 80 | RPM: 103 | Speed: 2 km/h[0m
+[0;32mI (17836) 4_MAGNET_RPM: A0: +59 | D0: 0 | Magnets: 80 | RPM: 103 | Speed: 2 km/h[0m
+[0;32mI (17936) 4_MAGNET_RPM: A0: -63 | D0: 1 | Magnets: 81 | RPM: 97 | Speed: 2 km/h[0m
+[0;32mI (18036) 4_MAGNET_RPM: A0: +49 | D0: 0 | Magnets: 81 | RPM: 97 | Speed: 2 km/h[0m
+[0;32mI (18136) 4_MAGNET_RPM: A0: +90 | D0: 0 | Magnets: 81 | RPM: 97 | Speed: 2 km/h[0m
+[0;32mI (18236) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 81 | RPM: 97 | Speed: 2 km/h[0m
+[0;32mI (18336) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 81 | RPM: 97 | Speed: 2 km/h[0m
+[0;32mI (18436) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (18536) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (18636) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (18736) 4_MAGNET_RPM: A0: +45 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (18836) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (18936) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19036) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19136) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19236) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19336) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19436) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19536) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19636) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19736) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19836) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (19936) 4_MAGNET_RPM: A0: +46 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20036) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20136) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20236) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20336) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20436) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20536) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20636) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20736) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20836) 4_MAGNET_RPM: A0: +42 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (20936) 4_MAGNET_RPM: A0: +40 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21036) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21136) 4_MAGNET_RPM: A0: +43 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21236) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21336) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21436) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21536) 4_MAGNET_RPM: A0: +39 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21636) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21736) 4_MAGNET_RPM: A0: +41 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21836) 4_MAGNET_RPM: A0: +38 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (21936) 4_MAGNET_RPM: A0: +47 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22036) 4_MAGNET_RPM: A0: +47 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22136) 4_MAGNET_RPM: A0: +50 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22236) 4_MAGNET_RPM: A0: +53 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22336) 4_MAGNET_RPM: A0: +50 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22436) 4_MAGNET_RPM: A0: +51 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22536) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22636) 4_MAGNET_RPM: A0: +51 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22736) 4_MAGNET_RPM: A0: +49 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22836) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m
+[0;32mI (22936) 4_MAGNET_RPM: A0: +52 | D0: 0 | Magnets: 81 | RPM: 0 | Speed: 0 km/h[0m

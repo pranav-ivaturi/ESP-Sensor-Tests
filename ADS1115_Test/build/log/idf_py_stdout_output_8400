@@ -1,0 +1,150 @@
+Command: C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:\esp\v6.0.2\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\ADS1115_Test\build\ADS1115_Test.elf C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\ADS1115_Test\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe' 'C:\esp\v6.0.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep  5 2026 19:28:01[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09fd8h ( 40920) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001a000 vaddr=3ffb0000 size=02a68h ( 10856) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001ca70 vaddr=40080000 size=035a8h ( 13736) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=10184h ( 65924) map[0m
+[0;32mI (136) esp_image: segment 4: paddr=000301ac vaddr=400835a8 size=07d94h ( 32148) load[0m
+[0;32mI (149) esp_image: segment 5: paddr=00037f48 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (155) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (155) boot: Disabling RNG early entropy source...[0m
+[0;32mI (167) cpu_start: Multicore app[0m
+[0;32mI (175) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (176) cpu_start: Pro cpu start user code[0m
+[0;32mI (176) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (178) app_init: Application information:[0m
+[0;32mI (181) app_init: Project name:     ADS1115_Test[0m
+[0;32mI (186) app_init: App version:      1[0m
+[0;32mI (189) app_init: Compile time:     Sep  5 2026 19:27:28[0m
+[0;32mI (194) app_init: ELF file SHA256:  416b2c5c3...[0m
+[0;32mI (198) app_init: ESP-IDF:          v6.0.2[0m
+[0;32mI (202) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (206) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (210) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (214) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (220) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 3FFB3470 len 0002CB90 (178 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (236) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 4008B33C len 00014CC4 (83 KiB): IRAM[0m
+[0;32mI (248) spi_flash: detected chip: generic[0m
+[0;32mI (250) spi_flash: flash io: dio[0m
+[0;33mW (253) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (267) main_task: Started on CPU0[0m
+[0;32mI (267) main_task: Calling app_main()[0m
+[0;32mI (267) ADS1115: =================================[0m
+[0;32mI (267) ADS1115:        ADS1115 TEST[0m
+[0;32mI (277) ADS1115: =================================[0m
+[0;32mI (277) ADS1115: Initializing I2C...[0m
+[0;32mI (287) ADS1115: I2C initialized.[0m
+[0;32mI (287) ADS1115: ADS1115 address: 0x48[0m
+[1;31mE (287) ADS1115: ADS1115 NOT FOUND![0m
+[1;31mE (297) ADS1115: Check SDA, SCL, VCC and GND.[0m
+[1;31mE (297) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (1307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (2307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (3307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (4307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (5307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (6307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (7307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (8307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (9307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (10307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (11307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (12307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (13307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (14307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (15307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (16307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (17307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (18307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (19307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (20307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (21307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (22307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (23307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (24307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (25307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (26307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (27307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (28307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (29307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (30307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (31307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (32307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (33307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (34307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (35307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (36307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (37307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (38307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (39307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (40307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (41307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (42307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (43307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (44307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (45307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (46307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (47307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (48307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (49307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (50307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (51307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (52307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (53307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (54307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (55307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (56307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (57307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (58307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (59307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (60307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (61307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (62307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (63307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (64307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (65307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (66307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (67307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (68307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (69307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (70307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (71307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (72307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (73307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (74307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (75307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (76307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (77307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (78307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (79307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (80307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (81307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (82307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (83307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (84307) ADS1115: ADS1115 read failed: ESP_ERR_INVALID_RESPONSE[0m

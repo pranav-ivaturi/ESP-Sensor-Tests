@@ -1,0 +1,1149 @@
+Command: C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:\esp\v6.0.2\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\HallEffect_Test\build\HallEffect_Test.elf C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\HallEffect_Test\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe' 'C:\esp\v6.0.2\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 14 2026 11:20:06[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09298h ( 37528) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=000192c0 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bcf4 vaddr=40080000 size=04324h ( 17188) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0e67ch ( 59004) map[0m
+[0;32mI (133) esp_image: segment 4: paddr=0002e6a4 vaddr=40084324 size=068e8h ( 26856) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=00034f94 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (150) boot: Disabling RNG early entropy source...[0m
+[0;32mI (163) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (173) app_init: Application information:[0m
+[0;32mI (177) app_init: Project name:     HallEffect_Test[0m
+[0;32mI (181) app_init: App version:      1[0m
+[0;32mI (185) app_init: Compile time:     Sep 14 2026 11:19:43[0m
+[0;32mI (190) app_init: ELF file SHA256:  f36afd7ea...[0m
+[0;32mI (194) app_init: ESP-IDF:          v6.0.2-dirty[0m
+[0;32mI (198) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (202) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (206) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (210) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (216) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 3FFB3400 len 0002CC00 (179 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (232) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (238) heap_init: At 4008AC0C len 000153F4 (84 KiB): IRAM[0m
+[0;32mI (244) spi_flash: detected chip: generic[0m
+[0;32mI (247) spi_flash: flash io: dio[0m
+[0;33mW (249) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (263) main_task: Calling app_main()[0m
+[0;32mI (263) HALL_TEST: ==============================[0m
+[0;32mI (263) HALL_TEST:       HALL EFFECT TEST[0m
+[0;32mI (273) HALL_TEST: ==============================[0m
+[0;32mI (273) HALL_TEST: Hall ADC initialized.[0m
+[0;32mI (283) HALL_TEST: Hall digital input initialized.[0m
+[0;32mI (283) HALL_TEST: A0 Raw: 1899 | A0: -1 | D0: LOW[0m
+[0;32mI (393) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (493) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (593) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (693) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (793) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (893) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (993) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (1093) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (1193) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (1293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (1393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (1493) HALL_TEST: A0 Raw: 1936 | A0: +36 | D0: LOW[0m
+[0;32mI (1593) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (1693) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (1793) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (1893) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (1993) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (2093) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (2193) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (2293) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (2393) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (2493) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (2593) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (2693) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (2793) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (2893) HALL_TEST: A0 Raw: 1807 | A0: -93 | D0: LOW[0m
+[0;32mI (2993) HALL_TEST: A0 Raw: 1789 | A0: -111 | D0: LOW[0m
+[0;32mI (3093) HALL_TEST: A0 Raw: 1858 | A0: -42 | D0: LOW[0m
+[0;32mI (3193) HALL_TEST: A0 Raw: 1840 | A0: -60 | D0: LOW[0m
+[0;32mI (3293) HALL_TEST: A0 Raw: 1891 | A0: -9 | D0: LOW[0m
+[0;32mI (3393) HALL_TEST: A0 Raw: 1835 | A0: -65 | D0: LOW[0m
+[0;32mI (3493) HALL_TEST: A0 Raw: 1871 | A0: -29 | D0: LOW[0m
+[0;32mI (3593) HALL_TEST: A0 Raw: 1839 | A0: -61 | D0: LOW[0m
+[0;32mI (3693) HALL_TEST: A0 Raw: 1833 | A0: -67 | D0: LOW[0m
+[0;32mI (3793) HALL_TEST: A0 Raw: 1837 | A0: -63 | D0: LOW[0m
+[0;32mI (3893) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (3993) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (4093) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (4193) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (4293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (4393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (4493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (4593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (4693) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (4793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (4893) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (4993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (5093) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (5193) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (5293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (5393) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (5493) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (5593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (5693) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (5793) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (5893) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (5993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (6093) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (6193) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (6293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (6393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (6493) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (6593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (6693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (6793) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (6893) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (6993) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (7093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (7193) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (7293) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (7393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (7493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (7593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (7693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (7793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (7893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (7993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (8093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (8193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (8293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (8393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (8493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (8593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (8693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (8793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (8893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (8993) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (9093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (9193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (9293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (9393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (9493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (9593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (9693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (9793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (9893) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (9993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (10093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (10193) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (10293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (10393) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (10493) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (10593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (10693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (10793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (10893) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (10993) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (11093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (11193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (11293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (11393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (11493) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (11593) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (11693) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (11793) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (11893) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (11993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (12093) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (12193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (12293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (12393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (12493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (12593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (12693) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (12793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (12893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (12993) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (13093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (13193) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (13293) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (13393) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (13493) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (13593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (13693) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (13793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (13893) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (13993) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (14093) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (14193) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (14293) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (14393) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (14493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (14593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (14693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (14793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (14893) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (14993) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (15093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (15193) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (15293) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (15393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (15493) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (15593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (15693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (15793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (15893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (15993) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (16093) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (16193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (16293) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (16393) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (16493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (16593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (16693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (16793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (16893) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (16993) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (17093) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (17193) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (17293) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (17393) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (17493) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (17593) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (17693) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (17793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (17893) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (17993) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (18093) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (18193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (18293) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (18393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (18493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (18593) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (18693) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (18793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (18893) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (18993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (19093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (19193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (19293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (19393) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (19493) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (19593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (19693) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (19793) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (19893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (19993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (20093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (20193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (20293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (20393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (20493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (20593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (20693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (20793) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (20893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (20993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (21093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (21193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (21293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (21393) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (21493) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (21593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (21693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (21793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (21893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (21993) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (22093) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (22193) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (22293) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (22393) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (22493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (22593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (22693) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (22793) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (22893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (22993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (23093) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (23193) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (23293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (23393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (23493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (23593) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (23693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (23793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (23893) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (23993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (24093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (24193) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (24293) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (24393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (24493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (24593) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (24693) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (24793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (24893) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (24993) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (25093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (25193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (25293) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (25393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (25493) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (25593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (25693) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (25793) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (25893) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (25993) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (26093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (26193) HALL_TEST: A0 Raw: 1932 | A0: +32 | D0: LOW[0m
+[0;32mI (26293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (26393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (26493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (26593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (26693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (26793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (26893) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (26993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (27093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (27193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (27293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (27393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (27493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (27593) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (27693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (27793) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (27893) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (27993) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (28093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (28193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (28293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (28393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (28493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (28593) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (28693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (28793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (28893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (28993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (29093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (29193) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (29293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (29393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (29493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (29593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (29693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (29793) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (29893) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (29993) HALL_TEST: A0 Raw: 1951 | A0: +51 | D0: LOW[0m
+[0;32mI (30093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (30193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (30293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (30393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (30493) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (30593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (30693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (30793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (30893) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (30993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (31093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (31193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (31293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (31393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (31493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (31593) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (31693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (31793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (31893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (31993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (32093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (32193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (32293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (32393) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (32493) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (32593) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (32693) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (32793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (32893) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (32993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (33093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (33193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (33293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (33393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (33493) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (33593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (33693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (33793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (33893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (33993) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (34093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (34193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (34293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (34393) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (34493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (34593) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (34693) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (34793) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (34893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (34993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (35093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (35193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (35293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (35393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (35493) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (35593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (35693) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (35793) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (35893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (35993) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (36093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (36193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (36293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (36393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (36493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (36593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (36693) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (36793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (36893) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (36993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (37093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (37193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (37293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (37393) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (37493) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (37593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (37693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (37793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (37893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (37993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (38093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (38193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (38293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (38393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (38493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (38593) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (38693) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (38793) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (38893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (38993) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (39093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (39193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (39293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (39393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (39493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (39593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (39693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (39793) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (39893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (39993) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (40093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (40193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (40293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (40393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (40493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (40593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (40693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (40793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (40893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (40993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (41093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (41193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (41293) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (41393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (41493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (41593) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (41693) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (41793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (41893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (41993) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (42093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (42193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (42293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (42393) HALL_TEST: A0 Raw: 1929 | A0: +29 | D0: LOW[0m
+[0;32mI (42493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (42593) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (42693) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (42793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (42893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (42993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (43093) HALL_TEST: A0 Raw: 1926 | A0: +26 | D0: LOW[0m
+[0;32mI (43193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (43293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (43393) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (43493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (43593) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (43693) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (43793) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (43893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (43993) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (44093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (44193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (44293) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (44393) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (44493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (44593) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (44693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (44793) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (44893) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (44993) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (45093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (45193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (45293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (45393) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (45493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (45593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (45693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (45793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (45893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (45993) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (46093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (46193) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (46293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (46393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (46493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (46593) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (46693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (46793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (46893) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (46993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (47093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (47193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (47293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (47393) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (47493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (47593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (47693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (47793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (47893) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (47993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (48093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (48193) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (48293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (48393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (48493) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (48593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (48693) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (48793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (48893) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (48993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (49093) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (49193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (49293) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (49393) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (49493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (49593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (49693) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (49793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (49893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (49993) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (50093) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (50193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (50293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (50393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (50493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (50593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (50693) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (50793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (50893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (50993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (51093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (51193) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (51293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (51393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (51493) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (51593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (51693) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (51793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (51893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (51993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (52093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (52193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (52293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (52393) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (52493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (52593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (52693) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (52793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (52893) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (52993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (53093) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (53193) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (53293) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (53393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (53493) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (53593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (53693) HALL_TEST: A0 Raw: 1926 | A0: +26 | D0: LOW[0m
+[0;32mI (53793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (53893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (53993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (54093) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (54193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (54293) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (54393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (54493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (54593) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (54693) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (54793) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (54893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (54993) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (55093) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (55193) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (55293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (55393) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (55493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (55593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (55693) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (55793) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (55893) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (55993) HALL_TEST: A0 Raw: 1924 | A0: +24 | D0: LOW[0m
+[0;32mI (56093) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (56193) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (56293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (56393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (56493) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (56593) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (56693) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (56793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (56893) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (56993) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (57093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (57193) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (57293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (57393) HALL_TEST: A0 Raw: 1926 | A0: +26 | D0: LOW[0m
+[0;32mI (57493) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (57593) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (57693) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (57793) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (57893) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (57993) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (58093) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (58193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (58293) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (58393) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (58493) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (58593) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (58693) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (58793) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (58893) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (58993) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (59093) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (59193) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (59293) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (59393) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (59493) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (59593) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (59693) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (59793) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (59893) HALL_TEST: A0 Raw: 1807 | A0: -93 | D0: LOW[0m
+[0;32mI (59993) HALL_TEST: A0 Raw: 1653 | A0: -247 | D0: LOW[0m
+E BOD: Brownout detector was triggered
+
+
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (53) boot: ESP-IDF v6.0.2-dirty 2nd stage bootloader[0m
+[0;32mI (53) boot: compile time Sep 14 2026 11:20:06[0m
+[0;32mI (53) boot: Multicore bootloader[0m
+[0;32mI (55) boot: chip revision: v3.1[0m
+[0;32mI (58) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (62) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (65) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (69) boot: Enabling RNG early entropy source...[0m
+[0;32mI (73) boot: Partition Table:[0m
+[0;32mI (76) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (82) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (89) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (95) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09298h ( 37528) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000192c0 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0001bcf4 vaddr=40080000 size=04324h ( 17188) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0e67ch ( 59004) map[0m
+[0;32mI (159) esp_image: segment 4: paddr=0002e6a4 vaddr=40084324 size=068e8h ( 26856) load[0m
+[0;32mI (171) esp_image: segment 5: paddr=00034f94 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     HallEffect_Test[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (211) app_init: Compile time:     Sep 14 2026 11:19:43[0m
+[0;32mI (216) app_init: ELF file SHA256:  f36afd7ea...[0m
+[0;32mI (220) app_init: ESP-IDF:          v6.0.2-dirty[0m
+[0;32mI (225) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (228) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (232) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (237) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFB3400 len 0002CC00 (179 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 4008AC0C len 000153F4 (84 KiB): IRAM[0m
+[0;32mI (271) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) HALL_TEST: ==============================[0m
+[0;32mI (289) HALL_TEST:       HALL EFFECT TEST[0m
+[0;32mI (299) HALL_TEST: ==============================[0m
+[0;32mI (299) HALL_TEST: Hall ADC initialized.[0m
+[0;32mI (309) HALL_TEST: Hall digital input initialized.[0m
+[0;32mI (309) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (419) HALL_TEST: A0 Raw: 1945 | A0: +45 | D0: LOW[0m
+[0;32mI (519) HALL_TEST: A0 Raw: 1851 | A0: -49 | D0: LOW[0m
+[0;32mI (619) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (719) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (819) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (919) HALL_TEST: A0 Raw: 1853 | A0: -47 | D0: LOW[0m
+[0;32mI (1019) HALL_TEST: A0 Raw: 1926 | A0: +26 | D0: LOW[0m
+[0;32mI (1119) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (1219) HALL_TEST: A0 Raw: 1930 | A0: +30 | D0: LOW[0m
+[0;32mI (1319) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (1419) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (1519) HALL_TEST: A0 Raw: 1615 | A0: -285 | D0: HIGH[0m
+[0;32mI (1619) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (1719) HALL_TEST: A0 Raw: 1728 | A0: -172 | D0: HIGH[0m
+[0;32mI (1819) HALL_TEST: A0 Raw: 1933 | A0: +33 | D0: LOW[0m
+[0;32mI (1919) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (2019) HALL_TEST: A0 Raw: 1927 | A0: +27 | D0: LOW[0m
+[0;32mI (2119) HALL_TEST: A0 Raw: 1939 | A0: +39 | D0: LOW[0m
+[0;32mI (2219) HALL_TEST: A0 Raw: 1951 | A0: +51 | D0: LOW[0m
+[0;32mI (2319) HALL_TEST: A0 Raw: 1954 | A0: +54 | D0: LOW[0m
+[0;32mI (2419) HALL_TEST: A0 Raw: 1936 | A0: +36 | D0: LOW[0m
+[0;32mI (2519) HALL_TEST: A0 Raw: 1854 | A0: -46 | D0: LOW[0m
+[0;32mI (2619) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (2719) HALL_TEST: A0 Raw: 1925 | A0: +25 | D0: LOW[0m
+[0;32mI (2819) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (2919) HALL_TEST: A0 Raw: 1897 | A0: -3 | D0: LOW[0m
+[0;32mI (3019) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (3119) HALL_TEST: A0 Raw: 1881 | A0: -19 | D0: LOW[0m
+[0;32mI (3219) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (3319) HALL_TEST: A0 Raw: 1863 | A0: -37 | D0: LOW[0m
+[0;32mI (3419) HALL_TEST: A0 Raw: 1871 | A0: -29 | D0: LOW[0m
+[0;32mI (3519) HALL_TEST: A0 Raw: 1862 | A0: -38 | D0: LOW[0m
+[0;32mI (3619) HALL_TEST: A0 Raw: 1867 | A0: -33 | D0: LOW[0m
+[0;32mI (3719) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (3819) HALL_TEST: A0 Raw: 1873 | A0: -27 | D0: LOW[0m
+[0;32mI (3919) HALL_TEST: A0 Raw: 1869 | A0: -31 | D0: LOW[0m
+[0;32mI (4019) HALL_TEST: A0 Raw: 1875 | A0: -25 | D0: LOW[0m
+[0;32mI (4119) HALL_TEST: A0 Raw: 1877 | A0: -23 | D0: LOW[0m
+[0;32mI (4219) HALL_TEST: A0 Raw: 1881 | A0: -19 | D0: LOW[0m
+[0;32mI (4319) HALL_TEST: A0 Raw: 1882 | A0: -18 | D0: LOW[0m
+[0;32mI (4419) HALL_TEST: A0 Raw: 1885 | A0: -15 | D0: LOW[0m
+[0;32mI (4519) HALL_TEST: A0 Raw: 1877 | A0: -23 | D0: LOW[0m
+[0;32mI (4619) HALL_TEST: A0 Raw: 1888 | A0: -12 | D0: LOW[0m
+[0;32mI (4719) HALL_TEST: A0 Raw: 1881 | A0: -19 | D0: LOW[0m
+[0;32mI (4819) HALL_TEST: A0 Raw: 1883 | A0: -17 | D0: LOW[0m
+[0;32mI (4919) HALL_TEST: A0 Raw: 1888 | A0: -12 | D0: LOW[0m
+[0;32mI (5019) HALL_TEST: A0 Raw: 1881 | A0: -19 | D0: LOW[0m
+[0;32mI (5119) HALL_TEST: A0 Raw: 1882 | A0: -18 | D0: LOW[0m
+[0;32mI (5219) HALL_TEST: A0 Raw: 1882 | A0: -18 | D0: LOW[0m
+[0;32mI (5319) HALL_TEST: A0 Raw: 1877 | A0: -23 | D0: LOW[0m
+[0;32mI (5419) HALL_TEST: A0 Raw: 1886 | A0: -14 | D0: LOW[0m
+[0;32mI (5519) HALL_TEST: A0 Raw: 1883 | A0: -17 | D0: LOW[0m
+[0;32mI (5619) HALL_TEST: A0 Raw: 1885 | A0: -15 | D0: LOW[0m
+[0;32mI (5719) HALL_TEST: A0 Raw: 1889 | A0: -11 | D0: LOW[0m
+[0;32mI (5819) HALL_TEST: A0 Raw: 1891 | A0: -9 | D0: LOW[0m
+[0;32mI (5919) HALL_TEST: A0 Raw: 1888 | A0: -12 | D0: LOW[0m
+[0;32mI (6019) HALL_TEST: A0 Raw: 1894 | A0: -6 | D0: LOW[0m
+[0;32mI (6119) HALL_TEST: A0 Raw: 1898 | A0: -2 | D0: LOW[0m
+[0;32mI (6219) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (6319) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (6419) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (6519) HALL_TEST: A0 Raw: 1922 | A0: +22 | D0: LOW[0m
+[0;32mI (6619) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (6719) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (6819) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (6919) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (7019) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (7119) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (7219) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (7319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (7419) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (7519) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (7619) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (7719) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (7819) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (7919) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (8019) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (8119) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (8219) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (8319) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (8419) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (8519) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (8619) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (8719) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (8819) HALL_TEST: A0 Raw: 1908 | A0: +8 | D0: LOW[0m
+[0;32mI (8919) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (9019) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (9119) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (9219) HALL_TEST: A0 Raw: 1912 | A0: +12 | D0: LOW[0m
+[0;32mI (9319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (9419) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (9519) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (9619) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (9719) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (9819) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (9919) HALL_TEST: A0 Raw: 1908 | A0: +8 | D0: LOW[0m
+[0;32mI (10019) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (10119) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (10219) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (10319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (10419) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (10519) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (10619) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (10719) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (10819) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (10919) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (11019) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (11119) HALL_TEST: A0 Raw: 1908 | A0: +8 | D0: LOW[0m
+[0;32mI (11219) HALL_TEST: A0 Raw: 1908 | A0: +8 | D0: LOW[0m
+[0;32mI (11319) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (11419) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (11519) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (11619) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (11719) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (11819) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (11919) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (12019) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (12119) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (12219) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (12319) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (12419) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (12519) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (12619) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (12719) HALL_TEST: A0 Raw: 1930 | A0: +30 | D0: LOW[0m
+[0;32mI (12819) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (12919) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (13019) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (13119) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (13219) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (13319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (13419) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (13519) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (13619) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (13719) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (13819) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (13919) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (14019) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (14119) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (14219) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (14319) HALL_TEST: A0 Raw: 1888 | A0: -12 | D0: LOW[0m
+[0;32mI (14419) HALL_TEST: A0 Raw: 1885 | A0: -15 | D0: LOW[0m
+[0;32mI (14519) HALL_TEST: A0 Raw: 1876 | A0: -24 | D0: LOW[0m
+[0;32mI (14619) HALL_TEST: A0 Raw: 1887 | A0: -13 | D0: LOW[0m
+[0;32mI (14719) HALL_TEST: A0 Raw: 1883 | A0: -17 | D0: LOW[0m
+[0;32mI (14819) HALL_TEST: A0 Raw: 1877 | A0: -23 | D0: LOW[0m
+[0;32mI (14919) HALL_TEST: A0 Raw: 1886 | A0: -14 | D0: LOW[0m
+[0;32mI (15019) HALL_TEST: A0 Raw: 1882 | A0: -18 | D0: LOW[0m
+[0;32mI (15119) HALL_TEST: A0 Raw: 1882 | A0: -18 | D0: LOW[0m
+[0;32mI (15219) HALL_TEST: A0 Raw: 1885 | A0: -15 | D0: LOW[0m
+[0;32mI (15319) HALL_TEST: A0 Raw: 1883 | A0: -17 | D0: LOW[0m
+[0;32mI (15419) HALL_TEST: A0 Raw: 1873 | A0: -27 | D0: LOW[0m
+[0;32mI (15519) HALL_TEST: A0 Raw: 1881 | A0: -19 | D0: LOW[0m
+[0;32mI (15619) HALL_TEST: A0 Raw: 1881 | A0: -19 | D0: LOW[0m
+[0;32mI (15719) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (15819) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (15919) HALL_TEST: A0 Raw: 1848 | A0: -52 | D0: LOW[0m
+[0;32mI (16019) HALL_TEST: A0 Raw: 1845 | A0: -55 | D0: LOW[0m
+[0;32mI (16119) HALL_TEST: A0 Raw: 1870 | A0: -30 | D0: LOW[0m
+[0;32mI (16219) HALL_TEST: A0 Raw: 1871 | A0: -29 | D0: LOW[0m
+[0;32mI (16319) HALL_TEST: A0 Raw: 1867 | A0: -33 | D0: LOW[0m
+[0;32mI (16419) HALL_TEST: A0 Raw: 1865 | A0: -35 | D0: LOW[0m
+[0;32mI (16519) HALL_TEST: A0 Raw: 1861 | A0: -39 | D0: LOW[0m
+[0;32mI (16619) HALL_TEST: A0 Raw: 1870 | A0: -30 | D0: LOW[0m
+[0;32mI (16719) HALL_TEST: A0 Raw: 1841 | A0: -59 | D0: LOW[0m
+[0;32mI (16819) HALL_TEST: A0 Raw: 1873 | A0: -27 | D0: LOW[0m
+[0;32mI (16919) HALL_TEST: A0 Raw: 1873 | A0: -27 | D0: LOW[0m
+[0;32mI (17019) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (17119) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (17219) HALL_TEST: A0 Raw: 1875 | A0: -25 | D0: LOW[0m
+[0;32mI (17319) HALL_TEST: A0 Raw: 1872 | A0: -28 | D0: LOW[0m
+[0;32mI (17419) HALL_TEST: A0 Raw: 1874 | A0: -26 | D0: LOW[0m
+[0;32mI (17519) HALL_TEST: A0 Raw: 1870 | A0: -30 | D0: LOW[0m
+[0;32mI (17619) HALL_TEST: A0 Raw: 1860 | A0: -40 | D0: LOW[0m
+[0;32mI (17719) HALL_TEST: A0 Raw: 1851 | A0: -49 | D0: LOW[0m
+[0;32mI (17819) HALL_TEST: A0 Raw: 1845 | A0: -55 | D0: LOW[0m
+[0;32mI (17919) HALL_TEST: A0 Raw: 1840 | A0: -60 | D0: LOW[0m
+[0;32mI (18019) HALL_TEST: A0 Raw: 1855 | A0: -45 | D0: LOW[0m
+[0;32mI (18119) HALL_TEST: A0 Raw: 1850 | A0: -50 | D0: LOW[0m
+[0;32mI (18219) HALL_TEST: A0 Raw: 1793 | A0: -107 | D0: LOW[0m
+[0;32mI (18319) HALL_TEST: A0 Raw: 1891 | A0: -9 | D0: LOW[0m
+[0;32mI (18419) HALL_TEST: A0 Raw: 1894 | A0: -6 | D0: LOW[0m
+[0;32mI (18519) HALL_TEST: A0 Raw: 1891 | A0: -9 | D0: LOW[0m
+[0;32mI (18619) HALL_TEST: A0 Raw: 1902 | A0: +2 | D0: LOW[0m
+[0;32mI (18719) HALL_TEST: A0 Raw: 1898 | A0: -2 | D0: LOW[0m
+[0;32mI (18819) HALL_TEST: A0 Raw: 1895 | A0: -5 | D0: LOW[0m
+[0;32mI (18919) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (19019) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (19119) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (19219) HALL_TEST: A0 Raw: 1899 | A0: -1 | D0: LOW[0m
+[0;32mI (19319) HALL_TEST: A0 Raw: 1899 | A0: -1 | D0: LOW[0m
+[0;32mI (19419) HALL_TEST: A0 Raw: 1899 | A0: -1 | D0: LOW[0m
+[0;32mI (19519) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (19619) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (19719) HALL_TEST: A0 Raw: 1899 | A0: -1 | D0: LOW[0m
+[0;32mI (19819) HALL_TEST: A0 Raw: 1899 | A0: -1 | D0: LOW[0m
+[0;32mI (19919) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (20019) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (20119) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (20219) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (20319) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (20419) HALL_TEST: A0 Raw: 1908 | A0: +8 | D0: LOW[0m
+[0;32mI (20519) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (20619) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (20719) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (20819) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (20919) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (21019) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (21119) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (21219) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (21319) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (21419) HALL_TEST: A0 Raw: 1905 | A0: +5 | D0: LOW[0m
+[0;32mI (21519) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (21619) HALL_TEST: A0 Raw: 1903 | A0: +3 | D0: LOW[0m
+[0;32mI (21719) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (21819) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (21919) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22019) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22119) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22219) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22319) HALL_TEST: A0 Raw: 1902 | A0: +2 | D0: LOW[0m
+[0;32mI (22419) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (22519) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22619) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (22719) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22819) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (22919) HALL_TEST: A0 Raw: 1904 | A0: +4 | D0: LOW[0m
+[0;32mI (23019) HALL_TEST: A0 Raw: 1912 | A0: +12 | D0: LOW[0m
+[0;32mI (23119) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (23219) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (23319) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (23419) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (23519) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (23619) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (23719) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (23819) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (23919) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (24019) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (24119) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (24219) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (24319) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (24419) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (24519) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (24619) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (24719) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (24819) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (24919) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (25019) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (25119) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (25219) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (25319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (25419) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (25519) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (25619) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (25719) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (25819) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (25919) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (26019) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (26119) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (26219) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (26319) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (26419) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (26519) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (26619) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (26719) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (26819) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (26919) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (27019) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (27119) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (27219) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (27319) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (27419) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (27519) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (27619) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (27719) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (27819) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (27919) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (28019) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (28119) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (28219) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (28319) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (28419) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (28519) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (28619) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (28719) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (28819) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (28919) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (29019) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (29119) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (29219) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (29319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (29419) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (29519) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (29619) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (29719) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (29819) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (29919) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (30019) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (30119) HALL_TEST: A0 Raw: 1907 | A0: +7 | D0: LOW[0m
+[0;32mI (30219) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (30319) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (30419) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (30519) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (30619) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (30719) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (30819) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (30919) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (31019) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (31119) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (31219) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (31319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (31419) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (31519) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (31619) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (31719) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (31819) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (31919) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (32019) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (32119) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (32219) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (32319) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (32419) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (32519) HALL_TEST: A0 Raw: 1916 | A0: +16 | D0: LOW[0m
+[0;32mI (32619) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (32719) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (32819) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (32919) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (33019) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (33119) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (33219) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (33319) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (33419) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (33519) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (33619) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (33719) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (33819) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (33919) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (34019) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (34119) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (34219) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (34319) HALL_TEST: A0 Raw: 1908 | A0: +8 | D0: LOW[0m
+[0;32mI (34419) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (34519) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (34619) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (34719) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (34819) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (34919) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (35019) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (35119) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (35219) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (35319) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (35419) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (35519) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (35619) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (35719) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (35819) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (35919) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (36019) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (36119) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (36219) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (36319) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (36419) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (36519) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (36619) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (36719) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (36819) HALL_TEST: A0 Raw: 1912 | A0: +12 | D0: LOW[0m
+[0;32mI (36919) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (37019) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (37119) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (37219) HALL_TEST: A0 Raw: 1923 | A0: +23 | D0: LOW[0m
+[0;32mI (37319) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (37419) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (37519) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (37619) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (37719) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (37819) HALL_TEST: A0 Raw: 1906 | A0: +6 | D0: LOW[0m
+[0;32mI (37919) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (38019) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (38119) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (38219) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (38319) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (38419) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (38519) HALL_TEST: A0 Raw: 1910 | A0: +10 | D0: LOW[0m
+[0;32mI (38619) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (38719) HALL_TEST: A0 Raw: 1909 | A0: +9 | D0: LOW[0m
+[0;32mI (38819) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (38919) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (39019) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (39119) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (39219) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (39319) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (39419) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (39519) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (39619) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (39719) HALL_TEST: A0 Raw: 1914 | A0: +14 | D0: LOW[0m
+[0;32mI (39819) HALL_TEST: A0 Raw: 1912 | A0: +12 | D0: LOW[0m
+[0;32mI (39919) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (40019) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (40119) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (40219) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (40319) HALL_TEST: A0 Raw: 1911 | A0: +11 | D0: LOW[0m
+[0;32mI (40419) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (40519) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (40619) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (40719) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (40819) HALL_TEST: A0 Raw: 1918 | A0: +18 | D0: LOW[0m
+[0;32mI (40919) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (41019) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (41119) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (41219) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (41319) HALL_TEST: A0 Raw: 1913 | A0: +13 | D0: LOW[0m
+[0;32mI (41419) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (41519) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (41619) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (41719) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (41819) HALL_TEST: A0 Raw: 1920 | A0: +20 | D0: LOW[0m
+[0;32mI (41919) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (42019) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (42119) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (42219) HALL_TEST: A0 Raw: 1919 | A0: +19 | D0: LOW[0m
+[0;32mI (42319) HALL_TEST: A0 Raw: 1915 | A0: +15 | D0: LOW[0m
+[0;32mI (42419) HALL_TEST: A0 Raw: 1921 | A0: +21 | D0: LOW[0m
+[0;32mI (42519) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+[0;32mI (42619) HALL_TEST: A0 Raw: 1917 | A0: +17 | D0: LOW[0m
+I 

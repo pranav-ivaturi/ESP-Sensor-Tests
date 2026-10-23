@@ -1,0 +1,24 @@
+Command: ninja flash
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\4_Magnets\build" && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/4_Magnets/build/partition_table/partition-table.bin" "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/4_Magnets/build/4_Magnets.bin""
+4_Magnets.bin binary size 0x25c50 bytes. Smallest app partition is 0x100000 bytes. 0xda3b0 bytes (85%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\4_Magnets\build\bootloader" && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/4_Magnets/build/bootloader/bootloader.bin""
+Bootloader binary size 0x65f0 bytes. 0xa10 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] Running utility command for flash
+esptool --chip esp32 -p COM9 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 40m --flash-size 2MB 0x1000 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 4_Magnets.bin
+esptool v5.4.0
+Serial port COM9:
+Connecting.....
+Connected to ESP32 on COM9:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                c0:cd:d6:ce:3b:a4
+
+Uploading stub flasher...
+
+[31mFAILED: [0mCMakeFiles/flash.util 
+C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\4_Magnets" && C:\Espressif\tools\cmake\4.0.3\bin\cmake.exe -D IDF_PATH=C:/esp/v6.0.2/esp-idf -D SERIAL_TOOL=C:/Espressif/tools/python/v6.0.2/venv/Scripts/python.exe;-m;esptool;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default-reset;--after=hard-reset;write-flash;@flash_args -D "WORKING_DIRECTORY=C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/4_Magnets/build" -P C:/esp/v6.0.2/esp-idf/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.

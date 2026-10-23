@@ -1,0 +1,58 @@
+Command: ninja flash
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Hydraulic_Pressure_Brake_Test\build" && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Hydraulic_Pressure_Brake_Test/build/partition_table/partition-table.bin" "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Hydraulic_Pressure_Brake_Test/build/Hydraulic_Pressure_Brake_Test.bin""
+Hydraulic_Pressure_Brake_Test.bin binary size 0x21a30 bytes. Smallest app partition is 0x100000 bytes. 0xde5d0 bytes (87%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Hydraulic_Pressure_Brake_Test\build\bootloader" && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Hydraulic_Pressure_Brake_Test/build/bootloader/bootloader.bin""
+Bootloader binary size 0x65f0 bytes. 0xa10 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] Running utility command for flash
+esptool --chip esp32 -p COM9 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 40m --flash-size 2MB 0x1000 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 Hydraulic_Pressure_Brake_Test.bin
+esptool v5.4.0
+Serial port COM9:
+Connecting......
+Connected to ESP32 on COM9:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                8c:94:df:4c:52:dc
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+
+Writing 'bootloader/bootloader.bin' at 0x00001000...
+SHA digest in image updated.
+Flash will be erased from 0x00001000 to 0x00007fff...
+Compressed 26096 bytes to 16557...
+Writing at 0x0000750b =============================>  99.0% 16.00kB/16.17kB [0s] 
+Writing at 0x000075f0 ============================== 100.0% 16.17kB/16.17kB [0s] 
+Wrote 26096 bytes (16557 compressed) at 0x00001000 in 0.9 seconds (242.8 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing 'partition_table/partition-table.bin' at 0x00008000...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 3072 bytes to 103...
+Writing at 0x00008c00 ============================== 100.0% 103B/103B [0s] 
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (341.7 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing 'Hydraulic_Pressure_Brake_Test.bin' at 0x00010000...
+Flash will be erased from 0x00010000 to 0x00031fff...
+Compressed 137776 bytes to 78687...
+Writing at 0x0001b845 ======                          20.8% 16.00kB/76.84kB [0s] 
+Writing at 0x00021823 ============                    41.6% 32.00kB/76.84kB [0s] 
+Writing at 0x00027080 ==================>             62.5% 48.00kB/76.84kB [1s] 
+Writing at 0x0002cae9 ========================>       83.3% 64.00kB/76.84kB [1s] 
+Writing at 0x00031a30 ============================== 100.0% 76.84kB/76.84kB [1s] 
+Wrote 137776 bytes (78687 compressed) at 0x00010000 in 2.1 seconds (532.8 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Hard resetting via RTS pin...

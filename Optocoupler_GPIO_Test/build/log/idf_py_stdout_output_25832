@@ -1,0 +1,30 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Optocoupler_GPIO_Test\build\bootloader" && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Optocoupler_GPIO_Test/build/bootloader/bootloader.bin""
+Bootloader binary size 0x65f0 bytes. 0xa10 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/Optocoupler_GPIO_Test.c.obj
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+NOTE: C:/esp/v6.0.2/esp-idf/components/bt/host/nimble/Kconfig.in:1421: 
+BT_NIMBLE_MESH_PROVISIONER: 'default 0' is not a valid bool value (only 'y' and
+'n' are allowed). Value is treated as 'n'.
+NOTE: C:/esp/v6.0.2/esp-idf/components/bt/controller/esp32/Kconfig.in:177: 
+BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF: 'default 0' is not a valid bool value 
+(only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: C:/esp/v6.0.2/esp-idf/components/fatfs/Kconfig:230: FATFS_PRINT_LLI: 
+'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+NOTE: C:/esp/v6.0.2/esp-idf/components/fatfs/Kconfig:235: FATFS_PRINT_FLOAT: 
+'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+[7/9] Linking CXX executable Optocoupler_GPIO_Test.elf
+[8/9] Generating binary image from built executable
+esptool v5.3.1
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Generated C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Optocoupler_GPIO_Test/build/Optocoupler_GPIO_Test.bin
+[9/9] C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Optocoupler_GPIO_Test\build" && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Optocoupler_GPIO_Test/build/partition_table/partition-table.bin" "C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Optocoupler_GPIO_Test/build/Optocoupler_GPIO_Test.bin""
+Optocoupler_GPIO_Test.bin binary size 0x23450 bytes. Smallest app partition is 0x100000 bytes. 0xdcbb0 bytes (86%) free.

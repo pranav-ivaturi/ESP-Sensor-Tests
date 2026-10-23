@@ -1,0 +1,6 @@
+"-specs=C:/Users/Prana/Documents/LOOP/ESP Sensor Tests/Hydraulic_Pressure_Brake_Test/build/bootloader/specs/picolibc.specs"
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero

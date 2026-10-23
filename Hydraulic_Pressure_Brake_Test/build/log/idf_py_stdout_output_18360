@@ -1,0 +1,452 @@
+Command: C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:\esp\v6.0.2\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Hydraulic_Pressure_Brake_Test\build\Hydraulic_Pressure_Brake_Test.elf C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Hydraulic_Pressure_Brake_Test\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe' 'C:\esp\v6.0.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  3 2026 19:58:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08d68h ( 36200) map[0m
+[0;32mI (99) esp_image: segment 1: paddr=00018d90 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b7c4 vaddr=40080000 size=04854h ( 18516) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0dd18h ( 56600) map[0m
+[0;32mI (132) esp_image: segment 4: paddr=0002dd40 vaddr=40084854 size=063b8h ( 25528) load[0m
+[0;32mI (143) esp_image: segment 5: paddr=00034100 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (149) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Multicore app[0m
+[0;32mI (169) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (175) app_init: Project name:     Hydraulic_Pressure_Brake_Test[0m
+[0;32mI (181) app_init: App version:      1[0m
+[0;32mI (184) app_init: Compile time:     Oct  3 2026 19:58:11[0m
+[0;32mI (189) app_init: ELF file SHA256:  d9d01a36f...[0m
+[0;32mI (193) app_init: ESP-IDF:          v6.0.2[0m
+[0;32mI (197) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (201) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (205) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (209) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (215) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (220) heap_init: At 3FFB3400 len 0002CC00 (179 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (231) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (236) heap_init: At 4008AC0C len 000153F4 (84 KiB): IRAM[0m
+[0;32mI (243) spi_flash: detected chip: generic[0m
+[0;32mI (245) spi_flash: flash io: dio[0m
+[0;33mW (248) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (262) main_task: Started on CPU0[0m
+[0;32mI (262) main_task: Calling app_main()[0m
+
+====================================
+   1 MPa Hydraulic Pressure Sensor
+====================================
+ADC: 795 | Voltage: 0.641 V | Pressure: 0.035 MPa | 35.2 kPa
+ADC: 173 | Voltage: 0.139 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 152 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 215 | Voltage: 0.173 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 119 | Voltage: 0.096 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 119 | Voltage: 0.096 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 139 | Voltage: 0.112 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 124 | Voltage: 0.100 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 111 | Voltage: 0.089 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 143 | Voltage: 0.115 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 127 | Voltage: 0.102 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 156 | Voltage: 0.126 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 162 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 155 | Voltage: 0.125 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 148 | Voltage: 0.119 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 119 | Voltage: 0.096 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 121 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 143 | Voltage: 0.115 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 115 | Voltage: 0.093 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 143 | Voltage: 0.115 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 109 | Voltage: 0.088 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 152 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 131 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 156 | Voltage: 0.126 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 139 | Voltage: 0.112 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 155 | Voltage: 0.125 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 137 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 136 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 111 | Voltage: 0.089 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 108 | Voltage: 0.087 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 113 | Voltage: 0.091 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 143 | Voltage: 0.115 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 110 | Voltage: 0.089 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 122 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 121 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 131 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 3 | Voltage: 0.002 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 113 | Voltage: 0.091 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 184 | Voltage: 0.148 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 365 | Voltage: 0.294 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 1063 | Voltage: 0.857 V | Pressure: 0.089 MPa | 89.2 kPa
+ADC: 155 | Voltage: 0.125 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 71 | Voltage: 0.057 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 112 | Voltage: 0.090 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 167 | Voltage: 0.135 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 125 | Voltage: 0.101 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 86 | Voltage: 0.069 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 165 | Voltage: 0.133 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 157 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 121 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 156 | Voltage: 0.126 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 170 | Voltage: 0.137 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 156 | Voltage: 0.126 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 160 | Voltage: 0.129 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 156 | Voltage: 0.126 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 203 | Voltage: 0.164 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 157 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 160 | Voltage: 0.129 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 191 | Voltage: 0.154 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 179 | Voltage: 0.144 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 184 | Voltage: 0.148 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 183 | Voltage: 0.147 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 180 | Voltage: 0.145 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 188 | Voltage: 0.152 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 720 | Voltage: 0.580 V | Pressure: 0.020 MPa | 20.1 kPa
+ADC: 304 | Voltage: 0.245 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 91 | Voltage: 0.073 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 173 | Voltage: 0.139 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 201 | Voltage: 0.162 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 192 | Voltage: 0.155 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 181 | Voltage: 0.146 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 189 | Voltage: 0.152 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 203 | Voltage: 0.164 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 176 | Voltage: 0.142 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 192 | Voltage: 0.155 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 193 | Voltage: 0.156 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 180 | Voltage: 0.145 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 189 | Voltage: 0.152 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 176 | Voltage: 0.142 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 184 | Voltage: 0.148 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 167 | Voltage: 0.135 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 155 | Voltage: 0.125 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 159 | Voltage: 0.128 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 180 | Voltage: 0.145 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 176 | Voltage: 0.142 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 178 | Voltage: 0.143 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 152 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 176 | Voltage: 0.142 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 174 | Voltage: 0.140 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 174 | Voltage: 0.140 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 171 | Voltage: 0.138 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 172 | Voltage: 0.139 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 167 | Voltage: 0.135 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 171 | Voltage: 0.138 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 174 | Voltage: 0.140 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 173 | Voltage: 0.139 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 165 | Voltage: 0.133 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 170 | Voltage: 0.137 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 171 | Voltage: 0.138 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 169 | Voltage: 0.136 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 162 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 173 | Voltage: 0.139 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 167 | Voltage: 0.135 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 165 | Voltage: 0.133 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 157 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 137 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 162 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 162 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 162 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 157 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 157 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 159 | Voltage: 0.128 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 150 | Voltage: 0.121 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 139 | Voltage: 0.112 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 157 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 160 | Voltage: 0.129 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 162 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 160 | Voltage: 0.129 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 159 | Voltage: 0.128 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 177 | Voltage: 0.143 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 150 | Voltage: 0.121 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 155 | Voltage: 0.125 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 164 | Voltage: 0.132 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 163 | Voltage: 0.131 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 205 | Voltage: 0.165 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 124 | Voltage: 0.100 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 150 | Voltage: 0.121 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 126 | Voltage: 0.102 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 132 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 124 | Voltage: 0.100 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 154 | Voltage: 0.124 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 150 | Voltage: 0.121 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 125 | Voltage: 0.101 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 150 | Voltage: 0.121 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 150 | Voltage: 0.121 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 149 | Voltage: 0.120 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 155 | Voltage: 0.125 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 131 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 153 | Voltage: 0.123 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 166 | Voltage: 0.134 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 146 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 147 | Voltage: 0.118 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 116 | Voltage: 0.093 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 167 | Voltage: 0.135 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 122 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 106 | Voltage: 0.085 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 124 | Voltage: 0.100 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 151 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 137 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 158 | Voltage: 0.127 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 182 | Voltage: 0.147 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 122 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 131 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 145 | Voltage: 0.117 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 121 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 103 | Voltage: 0.083 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 110 | Voltage: 0.089 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 139 | Voltage: 0.112 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 117 | Voltage: 0.094 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 122 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 112 | Voltage: 0.090 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 111 | Voltage: 0.089 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 119 | Voltage: 0.096 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 160 | Voltage: 0.129 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 117 | Voltage: 0.094 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 114 | Voltage: 0.092 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 112 | Voltage: 0.090 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 87 | Voltage: 0.070 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 121 | Voltage: 0.098 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 114 | Voltage: 0.092 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 115 | Voltage: 0.093 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 106 | Voltage: 0.085 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 93 | Voltage: 0.075 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 144 | Voltage: 0.116 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 130 | Voltage: 0.105 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 117 | Voltage: 0.094 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 142 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 256 | Voltage: 0.206 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 136 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 161 | Voltage: 0.130 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 141 | Voltage: 0.114 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 95 | Voltage: 0.077 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 108 | Voltage: 0.087 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 138 | Voltage: 0.111 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 108 | Voltage: 0.087 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 132 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 93 | Voltage: 0.075 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 206 | Voltage: 0.166 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 131 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 126 | Voltage: 0.102 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 126 | Voltage: 0.102 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 91 | Voltage: 0.073 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 124 | Voltage: 0.100 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 104 | Voltage: 0.084 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 134 | Voltage: 0.108 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 113 | Voltage: 0.091 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 96 | Voltage: 0.077 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 136 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 133 | Voltage: 0.107 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 124 | Voltage: 0.100 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 135 | Voltage: 0.109 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 125 | Voltage: 0.101 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 96 | Voltage: 0.077 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 128 | Voltage: 0.103 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 90 | Voltage: 0.073 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 126 | Voltage: 0.102 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 109 | Voltage: 0.088 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 137 | Voltage: 0.110 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 109 | Voltage: 0.088 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 129 | Voltage: 0.104 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 131 | Voltage: 0.106 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 123 | Voltage: 0.099 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 109 | Voltage: 0.088 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 87 | Voltage: 0.070 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 80 | Voltage: 0.064 V | Pressure: 0.000 MPa | 0.0 kPa
+ADC: 152 | Voltage: 0.122 V | Pressure: 0.000 MPa | 0.0 kPa

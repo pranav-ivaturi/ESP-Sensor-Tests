@@ -1,0 +1,331 @@
+Command: C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:\esp\v6.0.2\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Optocoupler_GPIO_Test\build\Optocoupler_GPIO_Test.elf C:\Users\Prana\Documents\LOOP\ESP Sensor Tests\Optocoupler_GPIO_Test\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe' 'C:\esp\v6.0.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 17 2026 17:45:34[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08c68h ( 35944) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=00018c90 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b6c4 vaddr=40080000 size=04954h ( 18772) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0d194h ( 53652) map[0m
+[0;32mI (131) esp_image: segment 4: paddr=0002d1bc vaddr=40084954 size=0623ch ( 25148) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=00033400 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (168) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (170) app_init: Application information:[0m
+[0;32mI (174) app_init: Project name:     Optocoupler_GPIO_Test[0m
+[0;32mI (179) app_init: App version:      1[0m
+[0;32mI (183) app_init: Compile time:     Sep 17 2026 17:45:15[0m
+[0;32mI (188) app_init: ELF file SHA256:  64892252c...[0m
+[0;32mI (192) app_init: ESP-IDF:          v6.0.2-dirty[0m
+[0;32mI (196) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (200) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (204) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (208) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (215) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (219) heap_init: At 3FFB33D0 len 0002CC30 (179 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (230) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (236) heap_init: At 4008AB90 len 00015470 (85 KiB): IRAM[0m
+[0;32mI (242) spi_flash: detected chip: generic[0m
+[0;32mI (245) spi_flash: flash io: dio[0m
+[0;33mW (247) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (261) main_task: Started on CPU0[0m
+[0;32mI (261) main_task: Calling app_main()[0m
+[0;32mI (261) OPTO_RX: Initializing Optocoupler Receiver on GPIO 25[0m
+[0;32mI (271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (1271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (1771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (2271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (2771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (3271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (3771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (4271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (4771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (5271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (5771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (6271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (6771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (7271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (7771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (8271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (8771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (9271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (9771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (10271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (10771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (11271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (11771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (12271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (12771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (13271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (13771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (14271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (14771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (15271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (15771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (16271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (16771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (17271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (17771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (18271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (18771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (19271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (19771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (20271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (20771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (21271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (21771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (22271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (22771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (23271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (23771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (24271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (24771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (25271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (25771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (26271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (26771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (27271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (27771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (28271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (28771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (29271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (29771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (30271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (30771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (31271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (31771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (32271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (32771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (33271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (33771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (34271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (34771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (35271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (35771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (36271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (36771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (37271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (37771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (38271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (38771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (39271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (39771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (40271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (40771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (41271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (41771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (42271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (42771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (43271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (43771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (44271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (44771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (45271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (45771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (46271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (46771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (47271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (47771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (48271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (48771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (49271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (49771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (50271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (50771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (51271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (51771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (52271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (52771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (53271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (53771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (54271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (54771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (55271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (55771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (56271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (56771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (57271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (57771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (58271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (58771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (59271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (59771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (60271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (60771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (61271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (61771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (62271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (62771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (63271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (63771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (64271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (64771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (65271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (65771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (66271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (66771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (67271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (67771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (68271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (68771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (69271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (69771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (70271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (70771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (71271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (71771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (72271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (72771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (73271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (73771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (74271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (74771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (75271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (75771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (76271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (76771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (77271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (77771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (78271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (78771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (79271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (79771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (80271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (80771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (81271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (81771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (82271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (82771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (83271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (83771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (84271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (84771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (85271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (85771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (86271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (86771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (87271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (87771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (88271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (88771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (89271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (89771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (90271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (90771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (91271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (91771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (92271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (92771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (93271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (93771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (94271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (94771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (95271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (95771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (96271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (96771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (97271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (97771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (98271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (98771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (99271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (99771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (100271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (100771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (101271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (101771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (102271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (102771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (103271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (103771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (104271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (104771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (105271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (105771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (106271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (106771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (107271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (107771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (108271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (108771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (109271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (109771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (110271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (110771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (111271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (111771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (112271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (112771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (113271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (113771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (114271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (114771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (115271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (115771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (116271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (116771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (117271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (117771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (118271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (118771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (119271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (119771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (120271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (120771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (121271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (121771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (122271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (122771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (123271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (123771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (124271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (124771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (125271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (125771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (126271) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (126771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (127271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (127771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (128271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (128771) OPTO_RX: Signal: 1 (Optocoupler is INACTIVE / OFF)[0m
+[0;32mI (129271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (129771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (130271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (130771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (131271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (131771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (132271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (132771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (133271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (133771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (134271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (134771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (135271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (135771) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
+[0;32mI (136271) OPTO_RX: Signal: 0 (Optocoupler is ACTIVE / ON)[0m
